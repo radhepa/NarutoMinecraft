@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.pause.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.pause","a1"]}]}
+You chose "I was checking my words". Keep the pause. Make the words useful.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.pause.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.pause","a2"]}]}
+You chose "I was not sure". A reason to ask, rather than guess.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.pause.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.pause"]}]}
+I listen for the answer I almost gave out of habit.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.question.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.question","a1"]}]}
+You chose "One precise question". Then make sure it contains only one thing.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.question.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.question","a2"]}]}
+You chose "Several simple ones". Leave enough silence for each answer.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.question.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.question"]}]}
+Simple ones. Precision does not require a complicated sentence.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.listen.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.listen","a1"]}]}
+You chose "Hear it first". Then write before your memory tidies it.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.listen.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.listen","a2"]}]}
+You chose "Notes as we go". Look up often enough to notice the person.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.listen.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.listen"]}]}
+I make few notes until I understand which question is missing.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.detail.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.detail","a1"]}]}
+You chose "The surprising detail". Ask how it was noticed.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.detail.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.detail","a2"]}]}
+You chose "The ordinary one". Good. Familiar things are easy to copy without seeing.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.detail.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.detail"]}]}
+Both. Start where a clear check is possible.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.correction.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.correction","a1"]}]}
+You chose "Let me correct it". You have time.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.correction.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.correction","a2"]}]}
+You chose "Ask the question". What did you see, before deciding what it meant?
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.correction.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.correction"]}]}
+I correct myself aloud. Then the other person can check the correction.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.silence.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.silence","a1"]}]}
+You chose "Leave it a moment". A sensible use of a moment.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.silence.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.silence","a2"]}]}
+You chose "Ask if they need time". Clear permission can make a difference.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.silence.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.silence"]}]}
+No. Some answers need the room nobody has given them yet.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.confidence.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.confidence","a1"]}]}
+You chose "Confident, with a reason". The reason is the useful part.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.confidence.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.confidence","a2"]}]}
+You chose "Show the uncertainty". Then we know where to check next.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.confidence.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.confidence"]}]}
+The uncertainty, clearly marked. Confidence can wait for evidence.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.repeat.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.repeat","a1"]}]}
+You chose "Repeat it plainly". Change the words if the first ones failed.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.repeat.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.repeat","a2"]}]}
+You chose "Ask what they understood". Then listen for the part you failed to explain.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.repeat.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.repeat"]}]}
+Ask first. Otherwise I may repeat my own mistake more loudly.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.warm_food.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.warm_food","a1"]}]}
+You chose "Talk first". Do not hurry for my benefit.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.warm_food.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.warm_food","a2"]}]}
+You chose "Eat a little". The food is not another question.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.warm_food.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.warm_food"]}]}
+Eat. A person has a body before an account.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.account.a1 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.account","a1"]}]}
+You chose "Another person can check it". Give the place and the time.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.sensei_4.account.a2 role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done fn=callback | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.account","a2"]}]}
+You chose "It says what is missing". And distinguishes missing from deliberately hidden.
+
+# bond: the same question turned back on the speaker.
+## talk.q.sensei_4.account.back role=role:sensei_4 stage=adult player_stage=child story=story.ch14.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch14.done"},{"answered":["role:sensei_4","q.cast.sensei_4.account"]}]}
+Both. A complete-sounding account can be the least useful one.

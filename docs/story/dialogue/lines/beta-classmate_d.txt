@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+I checked the path. You can put your pack here.
+Left foot first today. Watch it, {player}. Tell me if I favour it.
+The training ground is clear. I left room for another stance.
+Your strap is loose. Let me hold the buckle while you tighten it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+Something I can eat without taking my eyes off the yard. I am working on sitting down properly.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+An opening is a direction you forgot to watch. I am learning to watch more than one.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+I oil the scabbard before the moon-viewing walk. Quiet work suits the evening.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+My sibling checks my knots when I am not looking. I leave one easy to check.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Say which side you need covered. I would rather be useful than guessed at.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Tell the person beside you what you are about to do. A warning can be a kindness.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+A guard post where the people passing can afford to stop watching the road.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+Sometimes I check an exit twice. I am trying to make the second look quicker.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.spar.ask role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+A few rounds? Footwork first. I want you watching my balance.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.spar.arrive role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+I will call the opening after the strike. Tell me if I saw the same one you did.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.spar.good role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Your step made me change mine. That is a useful afternoon.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+I passed the form. My hands stayed steady after the first mistake.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+I hesitated in practice. Good place to find it. I will try again.

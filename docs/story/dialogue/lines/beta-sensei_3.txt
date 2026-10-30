@@ -1,0 +1,31 @@
+# life/bond/teach: the safe beta register from the character brief.
+## greet.personality role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done  fn=reveal_character | when: {"flag":"story.ch10.done"}
+How did you sleep? There is shade here if the answer is poorly.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.food role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done level=1..10 fn=reveal_character | when: {"flag":"story.ch10.done"}
+Tea first. The garden can keep its questions until the cup is warm.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.training role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done level=1..10 fn=teach | when: {"flag":"story.ch10.done"}
+Notice the picture changing before trying to break it. Release begins with noticing.
+
+# life/bond/teach: the safe beta register from the character brief.
+## talk.their_hobby role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done level=2..10 fn=reveal_character | when: {"flag":"story.ch10.done"}
+Gardening. A seedling is very clear about needing time.
+
+# life/bond/teach: the safe beta register from the character brief.
+## hangout.flower_viewing.ask role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done level=2..10 fn=deepen_bond | when: {"flag":"story.ch10.done"}
+Walk among the trees? We can leave the hurried path to other people.
+
+# life/bond/teach: the safe beta register from the character brief.
+## hangout.flower_viewing.arrive role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done level=2..10 fn=deepen_bond | when: {"flag":"story.ch10.done"}
+This branch found a little room between the others. It did not need to win the whole sky.
+
+# life/bond/teach: the safe beta register from the character brief.
+## life.passed_exam role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done  fn=react | when: {"flag":"story.ch10.done"}
+A new leaf. Let it settle before asking it to hold anything.
+
+# life/bond/teach: the safe beta register from the character brief.
+## life.dream_setback role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done  fn=react | when: {"flag":"story.ch10.done"}
+The first attempt did not take. We can tend the ground and try another.

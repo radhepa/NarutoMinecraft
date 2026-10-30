@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.edge | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Sharpen the tool now or practise with the spare?
+- Sharpen it now :: Keep the angle steady. {tone:honest}
+- Use the spare :: Learn its balance first. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.coin | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Spend on food or save for better equipment?
+- Food for today :: Training needs a body that can finish it. {tone:honest}
+- Save for equipment :: Know when the saving stops. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.practice_hour | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: One rested hour or two tired ones?
+- One rested hour :: Make it work. {tone:honest}
+- Two careful hours :: Stop before the tired form becomes the normal one. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.repair | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A cheap repair or wait for a lasting one?
+- A safe cheap repair :: Check the part taking the weight. {tone:honest}
+- Wait for a lasting one :: Borrow safely until then. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.lesson | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Pay for a lesson or learn beside a partner?
+- Pay a good teacher :: Ask what the lesson contains. {tone:honest}
+- Work with a partner :: Bring something useful to their practice. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.target | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A harder target or a cleaner first movement?
+- Harder target :: Do not let it excuse bad form. {tone:honest}
+- Clean first movement :: Then keep it when the target changes. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.worn_strap | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Replace a worn strap or shorten the load?
+- Replace the strap :: Check the buckle too. {tone:honest}
+- Lighten the load :: Say what you left behind. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.free_time | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: A free afternoon: rest or paid work?
+- Rest some of it :: Enough to return useful. {tone:honest}
+- Take the work :: Count the time it takes from training. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.show_work | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Explain the effort or show the technique?
+- Explain the useful part :: Not the speech about how hard it was. {tone:honest}
+- Show the technique :: Then repeat it cleanly. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad5_c.debt | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad5_c stage=child player_stage=child story=story.ch7.done | when: {"flag":"story.ch7.done"}
+Q: Repay a favour with money or time?
+- Money if useful :: Ask what the work was worth. {tone:honest}
+- Time at a clear task :: Name the day. {tone:gentle}

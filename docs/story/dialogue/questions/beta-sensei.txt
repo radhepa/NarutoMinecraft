@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.rest | fn: deepen_bond reveal_character | level: 2 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Break now, or after one clean attempt?
+- Break now :: Good. Set the tools down properly. {tone:honest}
+- One clean attempt :: One. Then we stop, whatever the result. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.pack | fn: deepen_bond reveal_character | level: 2 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Heavy pack. What comes out first?
+- Something I can borrow :: Ask before relying on another person's spare. {tone:honest}
+- Something I do not need :: Explain what it was for before you leave it. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.rain | fn: deepen_bond reveal_character | level: 2 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Rain coming. Drill inside, or practise getting wet?
+- Inside :: Then we work on hands. Clear a little floor. {tone:honest}
+- Get wet :: Dry clothes waiting first. We are learning, not catching cold. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.mistake | fn: deepen_bond reveal_character | level: 3 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Want the correction now, or time to find it?
+- Tell me now :: Your shoulder moves before your hand. {tone:honest}
+- Let me find it :: I will watch. Ask when you need the next pair of eyes. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.quiet | fn: deepen_bond reveal_character | level: 3 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Walking in silence. Comfortable, or awkward?
+- Comfortable :: Good. Watch where the path changes. {tone:honest}
+- A little awkward :: Then say so. We can talk about the path. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.praise | fn: deepen_bond reveal_character | level: 3 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: A nod, or the whole explanation when something goes right?
+- A nod :: You will still get the explanation when it matters. {tone:honest}
+- The explanation :: Then listen: you recovered before committing the next step. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.shavings | fn: deepen_bond reveal_character | level: 2 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: This offcut. Keep working, or leave the shape alone?
+- Keep working :: A little at a time. The blade takes away more than you expect. {tone:honest}
+- Leave it alone :: Knowing when to stop is useful work. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.help | fn: deepen_bond reveal_character | level: 4 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: If I miss a detail, will you interrupt?
+- Straight away :: Say what you saw. Briefly. {tone:honest}
+- When we are clear :: Unless the detail can hurt someone. Then speak. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.lunch | fn: deepen_bond reveal_character | level: 4 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: Company at lunch, or somewhere quiet today?
+- Company :: Make space. People arrive when they smell food. {tone:honest}
+- Somewhere quiet :: Take this path. It reaches a bench before the next turn. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.sensei.finish | fn: deepen_bond reveal_character | level: 5 | tags: role=role:sensei stage=adult player_stage=child story=story.ch0.done | when: {"flag":"story.ch0.done"}
+Q: A hard day. What makes it feel finished?
+- Everyone home :: Count the people you mean, then go see them. {tone:honest}
+- One thing put right :: Choose something small enough to finish before sleep. {tone:gentle}

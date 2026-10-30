@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.lesson.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.lesson","a1"]}]}
+You asked to see it first. I have moved the demonstration so you can see both hands.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.lesson.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.lesson","a2"]}]}
+You wanted the first try. I saved the blank half of the board for it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.seat.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.seat","a1"]}]}
+You chose the window. I kept the chalk dust away from that desk.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.seat.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.seat","a2"]}]}
+You wanted the front row. This drawing is especially ready for your criticism.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.snack.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.snack","a1"]}]}
+You picked a sweet study snack. I brought enough to share this time.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.snack.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.snack","a2"]}]}
+You wanted a filling snack. The rice balls are beside the homework.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.partner.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.partner","a1"]}]}
+You chose your partner. I made the exercise need both of your ideas.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.partner.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.partner","a2"]}]}
+You tried a new partner. I noticed you made room at the desk afterwards.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.chalk.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.chalk","a1"]}]}
+You defended the funny drawing. It now has labels, so we can call it scholarship.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.chalk.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.chalk","a2"]}]}
+You asked for a clearer diagram. I practised until the target stopped looking edible.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.stuck.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.stuck","a1"]}]}
+You wanted to talk the problem through. I will listen before reaching for the chalk.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.stuck.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.stuck","a2"]}]}
+You asked for quiet thinking time. This desk is free until the bell.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.correction.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.correction","a1"]}]}
+You chose the clear mark. I left space beside it for your own explanation.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.correction.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.correction","a2"]}]}
+You asked for notes. I kept this one short enough to fit beside the actual mistake.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.try_again.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.try_again","a1"]}]}
+You wanted to show the correction beside the mistake. A younger pupil tried the same idea today.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.try_again.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.try_again","a2"]}]}
+You wanted time before sharing your practice page. I have not shown it to anyone.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.festival.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.festival","a1"]}]}
+You voted for the game. I made sure watching counts as taking part.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.festival.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.festival","a2"]}]}
+You wanted the exhibition. I left a space for the first attempt beside each final piece.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.good_day.a1 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.good_day","a1"]}]}
+You said one new thing makes a lesson worthwhile. What was today's thing?
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.instructor.good_day.a2 role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.good_day","a2"]}]}
+You wanted a lesson where asking felt safe. We can start with the question you saved.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.lesson.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.lesson"]}]}
+I need to try it, then ask why my demonstration has become a broom.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.seat.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.seat"]}]}
+By the door, so I notice anyone trying to come in quietly.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.snack.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.snack"]}]}
+Whatever does not leave fingerprints on the answer sheet.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.partner.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.partner"]}]}
+Somebody new. Teachers need practice meeting people too.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.chalk.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.chalk"]}]}
+Keep it if you remember the lesson. Otherwise the potato retires.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.stuck.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.stuck"]}]}
+Explaining it aloud. The empty classroom is an excellent, patient pupil.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.correction.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.correction"]}]}
+A note. Mine usually starts with: slow down.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.try_again.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.try_again"]}]}
+Yes. I have enough examples to supply several classes.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.festival.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.festival"]}]}
+A game with an exhibition attached. This is why I need pupils to stop me.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.instructor.good_day.back role=role:instructor stage=adult player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:instructor","q.cast.instructor.good_day"]}]}
+When a pupil asks the question the rest were holding back.

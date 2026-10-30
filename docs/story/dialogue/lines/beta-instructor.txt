@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+There you are! I saved the example with the least embarrassing drawing.
+A question before class? Wonderful. A question about lunch? Also wonderful.
+Left foot looking steadier, {player}! Yes, I notice these things.
+Come in! A classroom can fit one more question.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+A proper lunch has something besides the thing you traded three rice balls for.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+You missed the mark. Tell me which part nearly worked, and we start there.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+I keep a list of things each pupil does well. Some pages need extra paper.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+My mother sells pickles. She thinks a flak vest is an expensive apron.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+A quiet pupil still has a question. My job is to leave room for it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Try the smallest part you can do today. Tomorrow gets its own attempt.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+A school where asking for help feels as ordinary as asking for chalk.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+Sometimes I fill a silence too quickly. I am practising waiting.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.train.ask role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Bring the exercise you keep folding out of sight. That one, yes!
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.train.arrive role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Slow it down until you can tell me where your fingers lose the shape.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.train.good role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Look at that margin! Three tries, and three different corrections. That is studying.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+You passed the lesson! Tell me which correction helped. I am writing it down.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:instructor stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+A failed attempt is a useful page. We will put the next one beside it.

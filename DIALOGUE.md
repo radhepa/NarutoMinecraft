@@ -19,7 +19,7 @@ choices.* Sections 1 to 3 are how the engine keeps that promise.
 | The engine (pure Java, no Minecraft): selection, the heard ledger, budgets, repeats, tokens, questions, barks, overheard talk | [`village/dialogue`](village/dialogue), package `dev.shinobi.village.dialogue` |
 | The authoring pipeline: compiler and validators, the composer | [`tools/dialogue/dialogue.py`](tools/dialogue/dialogue.py), [`compose.py`](tools/dialogue/compose.py) |
 | The writers' guide: format, tags, functions, voices, rules | [`tools/dialogue/WRITING.md`](tools/dialogue/WRITING.md) |
-| Sources | `tools/dialogue/lines/`, `seeds/` (→ `generated/`), `exchanges/`, `questions/`; story-gated: `docs/story/dialogue/` |
+| Sources | `tools/dialogue/lines/`, `seeds/` (Ã¢â€ â€™ `generated/`), `exchanges/`, `questions/`; story-gated: `docs/story/dialogue/` |
 | Tuning (budgets, facets, filler cap, specificity weights) | [`tools/dialogue/rules.json`](tools/dialogue/rules.json) |
 | The compiled bank | `src/main/resources/data/narutominecraft/dialogue/*.json` (moves to the Village mod in Phase 0) |
 | Stable ids | `tools/dialogue/ids.lock` (append-only) |
@@ -143,10 +143,10 @@ Village mod; `Heard.write` / `Heard.read`):
 
 | Field | Size |
 |---|---|
-| `lines`: a bitset of heard ids, Base64 | 1 bit per line in the bank: 30,000 lines → 3.75 KB raw, 5 KB as text |
+| `lines`: a bitset of heard ids, Base64 | 1 bit per line in the bank: 30,000 lines Ã¢â€ â€™ 3.75 KB raw, 5 KB as text |
 | `groups`: a bitset of spent groups | 1 bit per group |
-| `speakers`: per speaker talked to, in base 36: day, today's count, over-budget step, greeting day, lifetime count, fresh count, filler count, last question day, banked credits and their day, and the last six line ids said | ~45 bytes each; 300 speakers → 13 KB |
-| `answers`: question → answer; `axes`: axis → last pole and question; `asked_by`: per-friend questions by speaker | ~25 bytes per answered question |
+| `speakers`: per speaker talked to, in base 36: day, today's count, over-budget step, greeting day, lifetime count, fresh count, filler count, last question day, banked credits and their day, and the last six line ids said | ~45 bytes each; 300 speakers Ã¢â€ â€™ 13 KB |
+| `answers`: question Ã¢â€ â€™ answer; `axes`: axis Ã¢â€ â€™ last pole and question; `asked_by`: per-friend questions by speaker | ~25 bytes per answered question |
 
 A **100-hour worst case** (30,000 lines with 25,000 of them heard, all 300 residents with a full
 recall ring, 80 answered questions) is about **25 KB** (`QuestionsAndLedgerTest`); the beta's real
@@ -160,7 +160,7 @@ The glue reads the moment into a `Context` of tags:
 
 | Who is speaking | Their relationship to you | The world | You |
 |---|---|---|---|
-| `role` (cast), `personality` (VF's 16), `clan`, `group` (civilian, clanless, noble, minor), `rank`, `job`, `stage` (child, teen, adult), `gender`, `tier` | `level` (the level they act on, BONDS.md §3), `band` (VF's: stranger to best), `quarrel` (none to falling_out); meters, memories and moments through conditions | `time`, `weather`, `season`, `market`, `district`, `place`, `event` (festivals, exams, clan days), `mood` (BONDS village moods) | `player_rank`, `player_stage`, `clan_status` (born, member, other, clanless), `same_clan`, `slice` (beta1 to beta3); story flags, standing, reputation and recent deeds through conditions |
+| `role` (cast), `personality` (VF's 16), `clan`, `group` (civilian, clanless, noble, minor), `rank`, `job`, `stage` (child, teen, adult), `gender`, `tier` | `level` (the level they act on, BONDS.md Ã‚Â§3), `band` (VF's: stranger to best), `quarrel` (none to falling_out); meters, memories and moments through conditions | `time`, `weather`, `season`, `market`, `district`, `place`, `event` (festivals, exams, clan days), `mood` (BONDS village moods) | `player_rank`, `player_stage`, `clan_status` (born, member, other, clanless), `same_clan`, `slice` (beta1 to beta3); story flags, standing, reputation and recent deeds through conditions |
 
 **How a line is chosen** (`Talk`):
 
@@ -183,7 +183,7 @@ The glue reads the moment into a `Context` of tags:
 4. **Children speak only from children's lines.** A line with no `stage` tag is said by teens and
    adults; Academy kids draw from `greet.child`, `chat.child` and anything tagged `stage=child`.
 
-**Conditions** are Core's condition language (ROADMAP §5): `flag`, `quest_state`, `rank_at_least`,
+**Conditions** are Core's condition language (ROADMAP Ã‚Â§5): `flag`, `quest_state`, `rank_at_least`,
 `friendship`, `bond_meter`, `bond_memory`, `standing`, `event_active`, `village_mood`, `answered`...
 The engine asks a `Conditions` interface; in the game that is Core's registry, so Shinobi Life
 answers the bond conditions and Progression the quest states. `Conditions.basic` answers the common
@@ -222,7 +222,7 @@ the player can do, and where the lines come from:
 | **Questions** they ask you | `questions.json` | Section 8 |
 | **Gifts** | `gift.<loved/liked/plain/disliked/hated>`, personality variants | The taste and its effect are the bond engine's |
 | **Bond moments** | `bond.level.<n>` on a level-up, `bond.memory.*` and `bond.perk.*` in the bond book, `hangout.*` scenes, `callback.*`, `followup.*`, `life.*` news and your response | Exempt from the budget |
-| **Rumours and hooks** | `hook.<type>.offer` and outcomes; `ambient.hook.*` exchanges with a `lead:` | A lead lands in the journal (SIDE_QUESTS §2.3) |
+| **Rumours and hooks** | `hook.<type>.offer` and outcomes; `ambient.hook.*` exchanges with a `lead:` | A lead lands in the journal (SIDE_QUESTS Ã‚Â§2.3) |
 | **Shop talk** | `shop.<shop>.<part>` (greet, browse, buy, can't afford, sold out, sell back, haggle, closing, recommend, regulars) | Transactions cycle; shop chat is fresh |
 | **Missions** | `mission.<rank>.<template>.<part>` (title, brief, accept, decline, progress, success, fail, report), `.twist.<id>`, `.choice.<step>`; `mission.banter.<moment>.<speaker>[.<band>]`; `mission.desk.*` | The missions session's 65 beta templates; slot names are tokens; the clerk speaks the report, the client success and fail |
 | **Combat barks** | `combat.<event>.<speaker kind>`, `combat.command_ack.<order>` (`speaker=player_ally`), `combat.sensei_tip.<habit>`, `combat.boss.<id>.phase_<n>` | The combat session's keys; cycling, throttled by Combat (one per speaker per 6 s) |
@@ -341,7 +341,7 @@ Compiled (`questions.json`): `{"id", "num" (the ledger id), "fn", "level", "kind
 3. **Compile and validate** (`dialogue.py`). The compiler rejects:
    - unknown tags, values, functions, kinds, moods, tokens, conditions and actions;
    - lines over 300 characters;
-   - exact duplicates, and **near duplicates**: Jaccard over words and word pairs ≥ 0.72 between any
+   - exact duplicates, and **near duplicates**: Jaccard over words and word pairs Ã¢â€°Â¥ 0.72 between any
      two lines in reach of one player, except the voices of one group;
    - **literal names** (the clan and family name pools, the given-name pool once it exists) and canon
      characters or catchphrases;
@@ -362,33 +362,34 @@ Compiled (`questions.json`): `{"id", "num" (the ledger id), "fn", "level", "kind
 
 ### The bank today
 
-**15,766 pieces of dialogue** (`dialogue.py --stats`): 15,154 lines in 3,780 pools, 302 overheard
-exchanges (696 turns) and 310 questions (1,043 answers), with 8 story-gated pilot lines. By kind,
-10,050 lines are said once per save, 5,232 cycle and 174 are in the repeatable set.
+**17,448 pieces of dialogue** (`dialogue.py --stats`, 30 October 2026): 16,556 lines in 4,636 pools,
+302 overheard exchanges (696 turns) and 590 questions (1,603 answers). The beta cast has role-tagged
+voices for 28 roles, ten supplementary questions each, 560 answer callbacks and 280 asks-back replies.
+Story-gated sources stay under `docs/story/dialogue/`. The live conversation bridge remains Phase 0 work.
 
 | Family | Lines | What |
 |---|---|---|
-| `chat.*` | 3,836 | Small talk: 45 per personality, rank life, the village, jobs (28), clans (25 plus the clanless and civilian), districts, weather, time, seasons, 122 tutorial helpers, 931 children's lines |
-| `greet.*` | 2,558 | Greetings by time (300), weather, season, relationship band, the player's rank, personality (20 each), clan (14 each), job, place, Market Day, events, 437 children's |
-| `mission.*` | 1,667 | Every key of the missions session's 65 beta templates (titles, briefs, outcomes, 147 twists, 23 choices), 105 banter pools with cohesion bands, the desk clerk |
-| `callback.*` | 1,318 | A callback for every one of the 1,043 answers, contradictions, 250 hangout highlights |
+| `chat.*` | 3,878 | Small talk: 45 per personality, rank life, the village, jobs (28), clans (25 plus the clanless and civilian), districts, weather, time, seasons, 122 tutorial helpers, 931 children's lines |
+| `greet.*` | 2,628 | Greetings by time (300), weather, season, relationship band, the player's rank, personality (20 each), clan (14 each), job, place, Market Day, events, 437 children's |
+| `mission.*` | 1,712 | Every key of the missions session's 65 beta templates (titles, briefs, outcomes, 147 twists, 23 choices), 105 banter pools with cohesion bands, the desk clerk |
+| `callback.*` | 1,878 | A callback for every one of the 1,603 answers, contradictions, 250 hangout highlights |
 | `shop.*`, `job.*` | 1,414 | The items session's 31 shops by part, the 10 part-time jobs |
-| `hangout.*` | 939 | 27 activities (22 plus the 5 hosted at home): every part, highlights |
-| `talk.*` | 803 | The bond engine's conversation topics: about 18 general, 2 per personality and 6 for children per topic |
-| `combat.*` | 798 | Barks for bandits, rogues, bystanders, sparring partners and exam Genin; a pilot for allies and the rival; sensei tips |
-| `bond.*` | 655 | Greetings by level and quarrel state, level-ups, news, the bond book (memories, facts, feelings, perks, goals, kindling, level names) |
+| `hangout.*` | 1,009 | 27 activities (22 plus the 5 hosted at home): every part, highlights |
+| `talk.*` | 1,237 | The bond engine's conversation topics: about 18 general, 2 per personality and 6 for children per topic, plus cast topics and 280 asks-back replies |
+| `combat.*` | 910 | Barks for bandits, rogues, bystanders, sparring partners and exam Genin; role voices for allies and the rival; sensei tips |
+| `bond.*` | 668 | Greetings by level and quarrel state, level-ups, news, the bond book (memories, facts, feelings, perks, goals, kindling, level names) |
 | `home.*` | 438 | The home session's visits, notes, pantry, keys |
-| Others | 750 | Life events (235), gifts, hooks, reactions, follow-ups, village moods, the repeatable "again" and "close" sets by personality |
+| Others | 784 | Life events (291), gifts, hooks, reactions, follow-ups, village moods, the repeatable "again" and "close" sets by personality |
 | Exchanges | 302 | Overheard talk by relation (212) and 90 hook leads |
-| Questions | 310 | 150 general and 10 per personality; 101 follow-ups; levels 2 to 7; six contradiction axes |
+| Questions | 590 | 150 general, 10 per personality and 10 per beta cast role; 101 follow-ups; six contradiction axes |
 
 **Coverage.** Every pool the bond engine asks for exists (`DialogueKeys.required()` on `bonds-2`:
-1,371 of 1,371). For every personality × clan voice × rank × relationship band (8,400 cells, a
+1,371 of 1,371). For every personality Ãƒâ€” clan voice Ãƒâ€” rank Ãƒâ€” relationship band (8,400 cells, a
 spring morning at the market, a Genin player), a speaker can reach at least 86 fresh greetings
 (median 112) and 404 fresh small-talk pieces (median 466).
 
-**The function mix** (primary function): react 21.7%, reveal_character 19.2%, worldbuild 13.0%,
-deepen_bond 11.0%, callback 10.0%, commerce 9.5%, quest 8.2%, teach 3.4%, hook 2.1%, guide 1.2%,
+**The function mix** (primary function): react 21.3%, reveal_character 19.9%, callback 12.5%,
+worldbuild 12.0%, deepen_bond 11.2%, commerce 8.7%, quest 7.5%, teach 3.2%, hook 1.9%, guide 1.1%,
 **filler 0.7%** (at most 5.2% in any family: small talk).
 
 ## 10. Pool sizing
@@ -398,7 +399,7 @@ deepen_bond 11.0%, callback 10.0%, commerce 9.5%, quest 8.2%, teach 3.4%, hook 2
 | | Beta | Whole game |
 |---|---|---|
 | Hours (main path + a thorough player's side content) | 15 + 10 = 25 | 60 + 40 = 100 |
-| In-game days (three to an hour, BONDS.md §15) | ~75 | ~300 |
+| In-game days (three to an hour, BONDS.md Ã‚Â§15) | ~75 | ~300 |
 | Residents | ~200 in the beta's districts, 300 by the end | 300 |
 | Cast | 9 bound roles | grows by arc |
 
@@ -407,14 +408,14 @@ afternoon, evening) and about four of the cast each day, and a conversation is a
 to three exchanges (two on average):
 
 ```
-resident lines  = 9 conversations/day x 3 lines x 75 days  ≈ 2,000   (greetings 675, exchanges 1,350)
-cast lines      = 4 conversations/day x 3 lines x 75 days  ≈   900   (role and bond pools first, then the shared pools)
-question asks   ≈ 1 exchange in 10                         ≈   200   (bounded by eligibility: levels, follow-ups)
+resident lines  = 9 conversations/day x 3 lines x 75 days  Ã¢â€°Ë† 2,000   (greetings 675, exchanges 1,350)
+cast lines      = 4 conversations/day x 3 lines x 75 days  Ã¢â€°Ë†   900   (role and bond pools first, then the shared pools)
+question asks   Ã¢â€°Ë† 1 exchange in 10                         Ã¢â€°Ë†   200   (bounded by eligibility: levels, follow-ups)
 ```
 
 The talk budget bounds the extremes: a resident gives at most 3 fresh exchanges a day and 16 + 6 per
 level + 4 per slice in a lifetime, so even a player who talks to every one of 200 beta residents
-until they are dry draws at most about 200 x (16 + 6 x 2 + 4 x 3) ≈ 8,000 lines, and in practice
+until they are dry draws at most about 200 x (16 + 6 x 2 + 4 x 3) Ã¢â€°Ë† 8,000 lines, and in practice
 far fewer, because nobody meets everyone often.
 
 **From demand to supply.** A facet gets a share of the requests (its weight over the weights that
@@ -487,24 +488,25 @@ condition on it. They compile into `story.json`, which the engine loads like any
 compiler lets the story bible's terms appear only there, and requires `foreshadow` lines to carry a
 story id. This file, commit messages and reports never quote them.
 
-**Waiting on the story lock.** The story session is writing and reviewing the full story, then
-per-character dialogue briefs: voice, topics, what each must not reveal before which flag, and their
-questions for the player. Until then only a pilot of story-gated pools exists. The cast's own
-voices (role-tagged greetings, topics, hangouts, highlights, life events, combat barks for
-`player_ally` and `rival`, mission banter by role) wait for those briefs. The engine already selects
-them: a `role=` tag outweighs every other tag.
+**Beta briefs approved.** The owner approved the story for the beta build on 30 October 2026.
+The beta bank now includes role-tagged greetings, topics, hangouts and life events, supplementary
+questions with remembered answers, ally/rival combat barks, mission banter by role and public
+chapter reactions. A `role=` tag outweighs personality flavour within a selected pool. Story gates,
+role selection and persisted answer callbacks are tested against the real bank. Later arcs and
+their scripted questions follow the briefs' work order after beta play; the live UI bridge remains
+separate integration work.
 
 ## 13. What waits
 
 | What | Waits for |
 |---|---|
 | The glue: building a `Context` from a resident and the world (including `speaker` for barks and `job=mission_desk` for the clerk), the conversation window's topics and questions, the ledger's attachment and Codec, Core's condition registry behind `Conditions`, the name resolver behind `Names` (the cast, rolled names, pronouns, pets), speech bubbles from `mood` | Phase 0 (the Village mod and Core) |
-| The cast's voices: role-tagged greetings, topics, hangouts, life events, their questions (10 to 15 each), the `player_ally` and `rival` barks beyond the pilot, mission banter by role, and the story-gated pools | The story lock and the character briefs (the story session, `docs/story/DIALOGUE_BRIEFS.md`) |
+| Later-arc cast voices and exact scripted/bond-quest questions; full Varied voice skins | Beta play and the remaining cast/menu integration, in the order in `docs/story/DIALOGUE_BRIEFS.md` section 6; beta supplementary voices and questions are written |
 | Category-flavoured mission banter (`mission.banter.<category>.*`) | Later, as flavour (the missions session: delivery, pets, escort, beasts and guard first) |
 | The final bark list | The combat session's `data/combat/barks.json` (the pools follow its keys already) |
 | Districts and anchors | The Konoha build's `districts.json` (the `district` tag's list is provisional) |
 | Moving the compiled bank to `village/src/main/resources` | Phase 0's repository layout |
-| A JDK 25 run of the tests | This session's container had JDK 21 (`-PjavaRelease=21`) |
+| Later integration playtests | The full JDK 25 build and pure-engine tests pass on the names branch; the authored-bank UI bridge still waits for Phase 0 |
 
 ## 14. Decisions and open questions
 

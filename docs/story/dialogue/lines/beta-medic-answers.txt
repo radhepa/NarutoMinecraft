@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.water.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.water","a1"]}]}
+You asked for reminders to drink. The cup still needs you to do the lifting.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.water.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.water","a2"]}]}
+You wanted the full cup where you could see it. I moved it away from the paper slips.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.rest_place.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.rest_place","a1"]}]}
+You chose the quiet room. I left a note so visitors knock softly.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.rest_place.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.rest_place","a2"]}]}
+You wanted the corridor sounds. I left the door open a little.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.explanation.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.explanation","a1"]}]}
+You asked for the proper term first. You explained it back without needing the long word.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.explanation.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.explanation","a2"]}]}
+You preferred the plain explanation. That helped the next patient understand it too.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.crane.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.crane","a1"]}]}
+You wanted neat folds. Your last crane stands without leaning on the jar.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.crane.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.crane","a2"]}]}
+You chose to finish the awkward crane. I kept it beside the tidy one.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.early.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.early","a1"]}]}
+You agreed to come early. We solved that one while it was still small.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.early.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.early","a2"]}]}
+You wanted clear signs to watch. You noticed the change instead of guessing.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.visit.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.visit","a1"]}]}
+You wanted quiet company. I brought work that does not need conversation.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.visit.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.visit","a2"]}]}
+You asked for a later visit. I returned at the time you chose.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.notes.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.notes","a1"]}]}
+You chose to keep your own notes. Your dates helped us see the pattern.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.notes.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.notes","a2"]}]}
+You left the record with me. I saved time for your corrections before closing the page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.food_advice.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.food_advice","a1"]}]}
+You wanted the plan you could follow. Packed food turned out more useful than my beautiful timetable.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.food_advice.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.food_advice","a2"]}]}
+You asked to see the ideal as well. We marked the changes that were possible first.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.ask_twice.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.ask_twice","a1"]}]}
+You said I could ask twice. I explained what had changed before asking again.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.ask_twice.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.ask_twice","a2"]}]}
+You wanted the reason for a repeated question. I am trying to remember that with everyone.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.helping.a1 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.helping","a1"]}]}
+You wanted the reason said plainly. Your friend listened when the task stopped sounding like a test of courage.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.medic.helping.a2 role=role:medic stage=adult player_stage=child story=story.ch0.done fn=callback | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.helping","a2"]}]}
+You chose to take over one task. The patient sat down once there was a place for the work to go.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.water.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.water"]}]}
+The filled cup. I am not immune to ignoring my own instructions.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.rest_place.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.rest_place"]}]}
+Somewhere I can hear footsteps without being expected to answer them.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.explanation.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.explanation"]}]}
+The plain explanation. Precision should make a thing clearer.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.crane.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.crane"]}]}
+Finish it. My first jar contains several unusually broad birds.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.early.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.early"]}]}
+I would come. Being told to go home well is an excellent outcome.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.visit.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.visit"]}]}
+A short visit with an exact plan for the next one.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.notes.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.notes"]}]}
+Both. A patient notices things that do not happen in the examination room.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.food_advice.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.food_advice"]}]}
+The possible plan. An ideal lunch nobody has time to eat feeds nobody.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.ask_twice.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.ask_twice"]}]}
+I would want the reason. Patients do not become less curious by lying down.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.medic.helping.back role=role:medic stage=adult player_stage=child story=story.ch0.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch0.done"},{"answered":["role:medic","q.cast.medic.helping"]}]}
+Take one task, then explain. An argument is easier when nobody is carrying a full bucket.

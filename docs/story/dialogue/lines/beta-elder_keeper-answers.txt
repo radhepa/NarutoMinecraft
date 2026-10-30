@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.punctual.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.punctual","a1"]}]}
+You preferred arriving early. I had the papers ready before the bell.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.punctual.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.punctual","a2"]}]}
+You chose the bell as your measure. The appointment began when you said it would.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.script.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.script","a1"]}]}
+You chose to copy the uncertain letters. The gaps were more useful than guesses.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.script.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.script","a2"]}]}
+You read the whole line before copying. You caught the date the single letters had concealed.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.keys.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.keys","a1"]}]}
+You wanted a separate spare key. You remembered not to put both on the same ring.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.keys.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.keys","a2"]}]}
+You chose a trusted keeper for the spare. The arrangement was clear before it was needed.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.margin.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.margin","a1"]}]}
+You read the margin note as a clue. You also checked whose hand had left it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.margin.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.margin","a2"]}]}
+You set the margin aside until you understood the entry. The second reading changed its meaning.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.weathered.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.weathered","a1"]}]}
+You chose a careful rubbing. The faint line remained where the eye had lost it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.weathered.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.weathered","a2"]}]}
+You copied only what you could see. Another reader could tell exactly where the uncertainty began.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.question_order.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.question_order","a1"]}]}
+You asked the difficult question first. We had to return to the date before the answer made sense.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.question_order.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.question_order","a2"]}]}
+You began with what was certain. Your final question was shorter and harder to evade.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.correction.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.correction","a1"]}]}
+You wanted the error visible beneath the correction. The next reader could follow both hands.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.correction.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.correction","a2"]}]}
+You chose the dated note. That gave the next reader a way to check the change.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.appointment.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.appointment","a1"]}]}
+You chose a bounded wait. The late visitor found somebody still expecting them.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.appointment.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.appointment","a2"]}]}
+You wanted word sent. There was a useful reason for the delay, as there often is.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.return.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.return","a1"]}]}
+You wanted the crease mentioned without humiliation. The borrower asked how to protect the next page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.return.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.return","a2"]}]}
+You chose the quiet repair. The binding needed attention more than the reader did.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.patience.a1 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.patience","a1"]}]}
+You thought patience could mean leaving room. I let the answer arrive without another question.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.elder_keeper.patience.a2 role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done fn=callback | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.patience","a2"]}]}
+You called patience a kind of attention. You noticed the page was difficult to turn.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.punctual.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.punctual"]}]}
+Early. There is nearly always a stair somebody else needs first.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.script.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.script"]}]}
+The line first, then every letter. Neither is allowed to excuse the other.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.keys.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.keys"]}]}
+A spare in a known place, with a person who knows why it is there.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.margin.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.margin"]}]}
+Evidence that somebody else read the page. What it proves requires more work.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.weathered.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.weathered"]}]}
+Both, with permission. Different records can correct each other.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.question_order.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.question_order"]}]}
+The facts first. I distrust the shape of a question I have not examined.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.correction.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.correction"]}]}
+A dated correction, with the source beside it. Ink is not proof by itself.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.appointment.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.appointment"]}]}
+Send word, and leave the appointment open until I know what happened.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.return.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.return"]}]}
+Find the cause before choosing whom to instruct.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.elder_keeper.patience.back role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch4.done"},{"answered":["role:elder_keeper","q.cast.elder_keeper.patience"]}]}
+Attention. Waiting without it can become another way of looking away.

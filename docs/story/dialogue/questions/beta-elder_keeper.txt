@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.punctual | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: Better to arrive early or exactly when the bell rings?
+- A little early :: Then use the spare moment without disturbing those still working. {tone:honest}
+- At the bell :: An exact promise. Keep it. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.script | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: Old script: copy the letters or read the whole line first?
+- Copy the letters :: Leave a space for the ones you cannot yet identify. {tone:honest}
+- Read the whole line :: Context helps. Do not let it invent a missing word. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.keys | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: Carry a spare key or leave one with somebody trusted?
+- Carry a spare :: Keep it apart from the first. Two lost keys open nothing. {tone:honest}
+- Leave one with someone :: Make the arrangement before the door closes. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.margin | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: A note in the margin: useful clue or distraction?
+- A useful clue :: It needs an author and a date before it earns your trust. {tone:honest}
+- A distraction :: Read it after the entry. Distraction may still have a purpose. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.weathered | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: A worn inscription: take a rubbing or copy what you can see?
+- Take a rubbing :: Ask before touching the surface. Stone can be more fragile than paper. {tone:honest}
+- Copy by eye :: Mark every uncertainty. An honest gap is preferable to a confident invention. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.question_order | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: Ask a difficult question first or begin with what is certain?
+- The difficult question :: Do not mistake a quick answer for a complete one. {tone:honest}
+- Begin with certainty :: Then say plainly where certainty ends. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.correction | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: A record has an error. Cross it out or add a dated correction?
+- Cross it out carefully :: Keep the original legible. A correction should not erase its own reason. {tone:honest}
+- Add a dated note :: State what changed and how you know. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.appointment | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: Someone misses an appointment. Wait or send word?
+- Wait a little :: Give the waiting an end. Otherwise it becomes neglect of the next person. {tone:honest}
+- Send a message :: Briefly. Ask whether they are safe before reproaching them. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.return | fn: deepen_bond reveal_character | level: 4 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: A borrowed page comes back creased. Mention it or repair it quietly?
+- Mention it kindly :: A person cannot learn care from a correction they never hear. {tone:honest}
+- Repair it quietly :: Then check whether the binding made the damage likely. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_keeper.patience | fn: deepen_bond reveal_character | level: 5 | tags: role=role:elder_keeper stage=adult player_stage=child story=story.ch4.done | when: {"flag":"story.ch4.done"}
+Q: Does patience mean waiting, or paying attention while you wait?
+- Waiting without pushing :: Sometimes that is a considerable effort. {tone:honest}
+- Paying attention :: Then you may discover why the answer is taking time. {tone:gentle}

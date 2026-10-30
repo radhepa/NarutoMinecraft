@@ -1,0 +1,168 @@
+# Beta public aftermath by chapter; each pool includes a life beat. All fates share these lines.
+# plot/react: public aftermath only.
+## chat.village story=story.ch0.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch0.done"},{"not":{"flag":"story.ch1.done"}}]}
+The hospital kept lamps lit for the arrivals last night. I took clean blankets over.
+
+# life
+## chat.village story=story.ch0.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch0.done"},{"not":{"flag":"story.ch1.done"}}]}
+The laundry line has become a second village wall. At least this one is soft.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch1.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch2.done"}}]}
+The Academy has another pupil. I hope somebody shows them which door opens onto the yard.
+
+# life
+## chat.village story=story.ch1.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch2.done"}}]}
+A first bowl of ramen should come with a lesson on where to put the elbows.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch2.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch2.done"},{"not":{"flag":"story.ch3.done"}}]}
+Practice falls sound different from real ones. Usually there is more arguing afterwards.
+
+# life
+## chat.village story=story.ch2.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch2.done"},{"not":{"flag":"story.ch3.done"}}]}
+The training post has acquired a chalk face. Apparently it needed an expression for losing.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch3.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch3.done"},{"not":{"flag":"story.ch4.done"}}]}
+The Academy pupils are practising their control. I have never seen so much attention paid to a leaf.
+
+# life
+## chat.village story=story.ch3.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch3.done"},{"not":{"flag":"story.ch4.done"}}]}
+A leaf balanced on a brow looks very scholarly until somebody sneezes.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch4.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch4.done"},{"not":{"flag":"story.ch5.done"}}]}
+The watch is checking the lanes after dark. Let them work, and keep your lamps where they can be seen.
+
+# life
+## chat.village story=story.ch4.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch4.done"},{"not":{"flag":"story.ch5.done"}}]}
+Somebody accused my laundry of being a figure on the roof. A rather well-dressed figure, I thought.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch5.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch5.done"},{"not":{"flag":"story.ch6.done"}}]}
+The library is busy with Academy work. Return what you borrow before the next class needs it.
+
+# life
+## chat.village story=story.ch5.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch5.done"},{"not":{"flag":"story.ch6.done"}}]}
+There is a new bookmark by the catalogue. It says to stop using the catalogue as a bookmark.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch6.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch6.done"},{"not":{"flag":"story.ch7.done"}}]}
+Study groups have been carrying food through the Academy streets all afternoon.
+
+# life
+## chat.village story=story.ch6.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch6.done"},{"not":{"flag":"story.ch7.done"}}]}
+Exam preparation apparently requires enough rice to support a small bridge.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch7.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch7.done"},{"not":{"flag":"story.ch8.done"}}]}
+New forehead protectors in the street today. The pupils keep touching them to make sure they stay.
+
+# life
+## chat.village story=story.ch7.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch7.done"},{"not":{"flag":"story.ch8.done"}}]}
+A polished forehead protector can reflect a very worried face. I recommended breakfast first.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch8.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch8.done"},{"not":{"flag":"story.ch9.done"}}]}
+The new squads have their assignments. Three young voices make a surprisingly large discussion.
+
+# life
+## chat.village story=story.ch8.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch8.done"},{"not":{"flag":"story.ch9.done"}}]}
+The new squad tried walking through the tea-house door together. The door voted for single file.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch9.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch9.done"},{"not":{"flag":"story.ch10.done"}}]}
+Small errands keep the village moving. A delivered parcel matters most to the person waiting for it.
+
+# life
+## chat.village story=story.ch9.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch9.done"},{"not":{"flag":"story.ch10.done"}}]}
+A new Genin asked whether carrying turnips counted as training. The grower provided a second basket.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch10.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch10.done"},{"not":{"flag":"story.ch11.done"}}]}
+The training trees are busy. Give the students room when you pass underneath.
+
+# life
+## chat.village story=story.ch10.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch10.done"},{"not":{"flag":"story.ch11.done"}}]}
+I watched somebody climb halfway up a trunk and remember gravity with great conviction.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch11.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch11.done"},{"not":{"flag":"story.ch12.done"}}]}
+The gate watch is checking cart loads more carefully. Leave extra time for deliveries.
+
+# life
+## chat.village story=story.ch11.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch11.done"},{"not":{"flag":"story.ch12.done"}}]}
+The tea-house keeper wants a cart without squeaking wheels. I suggested a cart without tea cups first.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch12.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch12.done"},{"not":{"flag":"story.ch13.done"}}]}
+The lake drills have begun. Dry towels have become the most popular training equipment.
+
+# life
+## chat.village story=story.ch12.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch12.done"},{"not":{"flag":"story.ch13.done"}}]}
+A student assured me the splash was deliberate. A very thorough demonstration of water.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch13.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch13.done"},{"not":{"flag":"story.ch14.done"}}]}
+Some missions send the young squads farther from home. I packed food that keeps on the road.
+
+# life
+## chat.village story=story.ch13.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch13.done"},{"not":{"flag":"story.ch14.done"}}]}
+The map shop has a notice asking people to unfold the map before complaining about the missing river.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch14.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch14.done"},{"not":{"flag":"story.ch15.done"}}]}
+The desk has named the road threat: Yūgure. Read the notice rather than spreading a different version.
+
+# life
+## chat.village story=story.ch14.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch14.done"},{"not":{"flag":"story.ch15.done"}}]}
+The gate clerk keeps a spare pencil on a string. The string has outlasted three pencils and two arguments.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch15.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch15.done"},{"not":{"flag":"story.ch16.done"}}]}
+Exam candidates are arriving with their papers. Point visitors towards the hall if they ask.
+
+# life
+## chat.village story=story.ch15.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch15.done"},{"not":{"flag":"story.ch16.done"}}]}
+The proctors borrowed extra ink. That sounds more frightening than borrowing extra targets.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch16.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch16.done"},{"not":{"flag":"story.ch17.done"}}]}
+The forest stage is under way. The adults outside the fence look less patient than the candidates did.
+
+# life
+## chat.village story=story.ch16.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch16.done"},{"not":{"flag":"story.ch17.done"}}]}
+Someone packed a bedroll so tightly that opening it counted as the first survival exercise.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch17.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch17.done"},{"not":{"flag":"story.ch18.done"}}]}
+The placement bouts are finished. A judges' note can say more than a cheer if you read it properly.
+
+# life
+## chat.village story=story.ch17.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch17.done"},{"not":{"flag":"story.ch18.done"}}]}
+One spectator attempted to explain footwork while standing on a dropped rice ball.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch18.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch18.done"},{"not":{"flag":"story.ch19.done"}}]}
+There is time for training before the finals. There should also be time for eating and mending straps.
+
+# life
+## chat.village story=story.ch18.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch18.done"},{"not":{"flag":"story.ch19.done"}}]}
+The tailors can recognise an exam candidate by the new patch over the old patch.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch19.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch19.done"},{"not":{"flag":"story.ch20.done"}}]}
+The stadium is closed after the attack. Leave the stair clear for the people bringing help.
+
+# life
+## chat.village story=story.ch19.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch19.done"},{"not":{"flag":"story.ch20.done"}}]}
+The relief kitchen has labelled the onions very firmly. Even in this mess, somebody keeps putting them with the pears.
+
+# plot/react: public aftermath only.
+## chat.village story=story.ch20.done player_stage=child fn=react,worldbuild | when: {"all":[{"flag":"story.ch20.done"},{"not":{"flag":"story.ch21.done"}}]}
+The promotion notices are up. Some of those new Chunin were pupils only a short time ago.
+
+# life
+## chat.village story=story.ch20.done player_stage=child fn=worldbuild | when: {"all":[{"flag":"story.ch20.done"},{"not":{"flag":"story.ch21.done"}}]}
+A new vest arrived with three people offering to explain its pockets. The wearer needed lunch more urgently.

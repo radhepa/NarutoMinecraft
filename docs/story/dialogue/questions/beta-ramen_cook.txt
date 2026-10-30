@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.seat | fn: reveal_character deepen_bond | level: 2 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Counter seat or the little end table?
+- At the counter :: Good! You can tell me when I lose track of a pot! {tone:honest}
+- End table :: A quieter bowl coming up! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.broth | fn: reveal_character deepen_bond | level: 2 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Broth first or noodles first?
+- Taste the broth :: Careful with the steam! It has opinions! {tone:honest}
+- Straight to noodles :: Lift a little, not the entire afternoon! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.usual | fn: reveal_character deepen_bond | level: 2 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Ask for your usual or let you choose anew?
+- Offer the usual :: With permission to change it! I have other ingredients! {tone:honest}
+- Ask each visit :: A new question for a new appetite! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.egg | fn: reveal_character deepen_bond | level: 2 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Split an extra egg or keep it for later?
+- Split it now :: A useful knife and a diplomatic hand! {tone:honest}
+- Save it properly :: Wrapped before the bowl gets cold! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.busy_lunch | fn: reveal_character deepen_bond | level: 3 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Busy lunch: quick bowl or time to sit?
+- Quick bowl :: I can move fast without making you swallow the weather! {tone:honest}
+- Time to sit :: Good! The chair has been looking underemployed! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.new_flavour | fn: reveal_character deepen_bond | level: 3 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Try a little new flavour or keep the favourite?
+- A little new flavour :: Beside the usual, so the experiment does not steal lunch! {tone:honest}
+- Keep the favourite :: A sound order! Familiar can be exactly the point! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.empty_bowl | fn: reveal_character deepen_bond | level: 3 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Tell me when the bowl was good or simply come back?
+- Say what was good :: Then I know what to keep doing! {tone:honest}
+- Come back tomorrow :: An excellent review with actual feet! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.last_place | fn: reveal_character deepen_bond | level: 3 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Last free seat: take it or ask who was waiting?
+- Take it if clear :: Look once before sitting. That is all the ceremony needed! {tone:honest}
+- Ask who was waiting :: I will keep the bowl warm while we sort it out! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.takeaway | fn: reveal_character deepen_bond | level: 4 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Carry lunch home or eat while it is hot?
+- Carry it home :: Keep it level! The broth would like to arrive with the noodles! {tone:honest}
+- Eat it here :: A fine arrangement for my entire profession! {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.ramen_cook.company | fn: reveal_character deepen_bond | level: 4 | tags: role=role:ramen_cook stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A rough day: questions or a bowl without them?
+- Ask one small question :: Then I listen while you eat! {tone:honest}
+- Just the bowl :: Coming up. Words can sit down later! {tone:gentle}

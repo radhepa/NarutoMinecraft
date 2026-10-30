@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=reveal_character  | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Come closer, little one. That chair is for sitting in, even with muddy sandals.
+There is room at this table. There is always room if we move the paperwork.
+A quick visit? Then a small bun. We have negotiated.
+You look busy. Sit long enough to tell me what filled the morning.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+A kitchen that knows how much to make also knows who has not come home yet.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+You can learn a great deal carrying the cooking pot together. Especially when somebody walks too fast.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+I try a recipe when the paperwork gets stubborn. The recipe usually cooperates.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+My daughter runs a better kitchen than I do. Please do not report that I admitted it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+If a child needs three forms to ask for lunch, the forms need changing.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Start by asking who will have to live with the decision after you leave the room.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+An orphan arriving at any gate should know there is a bed already waiting.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+A long table can still leave somebody at the end unheard. I try to walk round it.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.barbecue.ask role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+The kitchen has a table free. Let us improve that situation.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.barbecue.arrive role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+Turn that piece now. Leading a village has not taught me to stop burning onions.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.barbecue.good role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+A useful meeting. We settled lunch before it became a committee.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+A lesson passed deserves a meal with the people who helped. Take enough for them.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:hokage_4 stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch19.named"}}]}
+An exam is a morning. You have many mornings left to grow into.

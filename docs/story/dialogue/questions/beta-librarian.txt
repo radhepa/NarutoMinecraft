@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.bookmark | fn: deepen_bond reveal_character | level: 2 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: Ribbon bookmark or a loose paper slip?
+- A ribbon :: Less likely to fall into somebody else's chapter. {tone:honest}
+- A paper slip :: You can write the question on it, if you leave the book itself alone. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.reading_place | fn: deepen_bond reveal_character | level: 2 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: Read by a window or under a lamp?
+- By the window :: Move before the light reaches the ink. Some colours fade. {tone:honest}
+- Under a lamp :: A steady light. Keep the flame away from the page edge. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.index | fn: deepen_bond reveal_character | level: 2 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: Find a book by its title or by browsing the shelves?
+- Use the title :: I can show which part of the catalogue answers that. {tone:honest}
+- Browse the shelves :: Leave room for a book you did not know to ask for. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.aloud | fn: deepen_bond reveal_character | level: 2 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: A difficult passage: read silently or hear it aloud?
+- Read it quietly :: I will wait until you reach the full stop. {tone:honest}
+- Read it aloud :: A sentence sometimes makes more sense when it has to fit a breath. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.old_copy | fn: deepen_bond reveal_character | level: 3 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: A clean new copy or an old one with careful notes?
+- The new copy :: Check which edition. New paper does not always mean new knowledge. {tone:honest}
+- The annotated one :: Ask whose notes they are. A tidy hand can still be mistaken. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.ending | fn: deepen_bond reveal_character | level: 3 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: Read the ending first or trust the writer to take you there?
+- Read the ending :: Then you will notice a different set of clues on the way. {tone:honest}
+- Trust the journey :: A good reason to leave the page corners alone. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.borrowed_note | fn: deepen_bond reveal_character | level: 3 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: A useful note somebody left in a book. Keep it there or hand it in?
+- Keep it with the page :: In a sleeve, perhaps. Loose paper likes to find new homes. {tone:honest}
+- Hand it to the desk :: Then we can find whether somebody is looking for it. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.question_mark | fn: deepen_bond reveal_character | level: 3 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: Would you put a question mark beside something you doubt?
+- On my own notes :: Good. A question can be a more precise record than a guess. {tone:honest}
+- I would ask someone :: Bring the passage. It deserves to be read in its own words. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.recommendation | fn: deepen_bond reveal_character | level: 4 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: Recommend a favourite book or one chosen for the reader?
+- My favourite :: Tell them why it matters to you. That is part of the gift. {tone:honest}
+- Choose for the reader :: Ask what they have been wondering about lately. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.librarian.unfinished_book | fn: deepen_bond reveal_character | level: 5 | tags: role=role:librarian stage=adult player_stage=child story=story.ch5.done | when: {"flag":"story.ch5.done"}
+Q: A book is too difficult today. Put it away or keep trying?
+- Put it away for now :: Use a bookmark. The door can stay open without you standing in it. {tone:honest}
+- Try a smaller passage :: One paragraph is a respectable day's reading. {tone:gentle}

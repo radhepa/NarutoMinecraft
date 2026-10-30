@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.breakfast | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Last rice ball. Split it, or race for it?
+- Split it :: Fine! I get the bigger half. Kidding. Mostly. {tone:honest}
+- Race for it :: All right! Nobody tells the pup which way we are running. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.judge | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Can the pup judge a race if I am in it?
+- Of course :: Good judge! Very serious face. Ignore the wagging. {tone:honest}
+- Only with another judge :: Fine. A committee. The pup wants snacks for the meeting. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.mud | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Muddy shortcut or the long dry path?
+- Muddy shortcut :: Fast route! Shoes off before Grandma sees the mat. {tone:honest}
+- Long dry path :: We can still race part of it. The dry part, naturally. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.cheer | fn: deepen_bond reveal_character | level: 2 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Loud cheering, or would that put you off?
+- Make some noise :: I have been preparing for this responsibility all my life. {tone:honest}
+- Quiet until I finish :: Got it. I will put the cheering in my elbows. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.lost_tool | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Found a tool on the path. Notice board or look for its owner?
+- Put up a notice :: I will draw it badly enough that only the owner can recognise it. {tone:honest}
+- Look together :: Yes! A mission with a very small mystery. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.nickname | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Is it all right if I give you a nickname?
+- If I can give you one :: Deal! Make it something fast. {tone:honest}
+- Ask me before using it :: All right. It is yours, so you get a vote. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.roofs | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Pick the next race: fewer jumps or a trickier landing?
+- Fewer jumps, faster run :: Speed round! No hiding behind a fancy hop. {tone:honest}
+- Trickier landing :: We check the landing first. I do listen in class sometimes. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.late | fn: deepen_bond reveal_character | level: 3 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: If I am late, do you come looking or wait where we agreed?
+- Come looking :: Start at the food stalls. That is a useful clue. {tone:honest}
+- Wait where we agreed :: Then I know where to run back to. That helps. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.whole_team | fn: deepen_bond reveal_character | level: 4 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: One person gets the praise. Should they name everybody who helped?
+- Name everybody :: Exactly! Someone held the ladder. That matters. {tone:honest}
+- Let them have the moment :: Fair. We can tell the others afterwards. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.teammate_b.small_help | fn: deepen_bond reveal_character | level: 5 | tags: role=role:teammate_b stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Does a tiny bit of help still count when nobody notices?
+- It still counts :: Good. I was hoping the small stuff had somewhere to go. {tone:honest}
+- Tell somebody it helped :: Then I will say it. You waiting helped. {tone:gentle}

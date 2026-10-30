@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+{player}. The forms are in order. I hope your breakfast was as well.
+Come in. The queue can spare a moment for the person holding the paper.
+A signature can wait while you catch your breath.
+You have a question. Good. A blank form is a poor listener.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+The household argues over pickles more fiercely than the council argues over paths.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+A schedule should leave time to mend the sandal that schedule wore through.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+The garden keeps its own agenda. I enjoy being overruled by a bean plant.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+My household has several opinions about when a guest has had enough tea. You need not agree with any.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+A rule is not doing its work if the people it serves cannot explain it.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Ask to read the condition before agreeing to it. We can wait while you do.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+A registry that welcomes a child before asking which house sent them.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+I keep a second chair beside the desk. It reminds me to hear a person, rather than a file.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.flower_viewing.ask role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+There is shade beside the garden. We may leave the files indoors.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.flower_viewing.arrive role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+These shoots need space. Advice I should remember at the council table.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.flower_viewing.good role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+An afternoon with no seal required. We should put that in good order more often.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+Your lesson is complete. Tell me what made the last attempt different.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+There is no penalty for asking which part of the instruction was unclear.

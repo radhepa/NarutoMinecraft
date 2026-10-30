@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.schedule.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.schedule","a1"]}]}
+You chose "A precise time". I will make the route allow for arriving calmly.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.schedule.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.schedule","a2"]}]}
+You chose "A little window". Then I shall state when the window ends.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.schedule.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.schedule"]}]}
+A precise time, with permission to report a delay.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.stroke.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.stroke","a1"]}]}
+You chose "Perfect form". I can explain the standard if you wish.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.stroke.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.stroke","a2"]}]}
+You chose "My own hand". I would like to understand how to practise that.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.stroke.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.stroke"]}]}
+My own hand, once I know which rule I am choosing to bend.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.appeal.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.appeal","a1"]}]}
+You chose "Ask privately first". A clear question may spare a public misunderstanding.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.appeal.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.appeal","a2"]}]}
+You chose "Raise it openly". Then others affected may answer as well.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.appeal.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.appeal"]}]}
+Privately if someone needs safety. Openly if quiet has become the barrier.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.formal.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.formal","a1"]}]}
+You chose "Use titles". Then I will make sure I have yours correct.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.formal.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.formal","a2"]}]}
+You chose "Given names". I shall try. You may remind me if habit wins.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.formal.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.formal"]}]}
+Given names among partners, if everybody agrees.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.turn.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.turn","a1"]}]}
+You chose "Offer the time". I will make clear that accepting it is optional.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.turn.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.turn","a2"]}]}
+You chose "Finish a small task". Then leave the next person's place ready.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.turn.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.turn"]}]}
+Ask whether the next person needs the time before using it myself.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.report.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.report","a1"]}]}
+You chose "Short, with the key fact". I will keep the fuller notes available.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.report.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.report","a2"]}]}
+You chose "A full account". I shall distinguish what I saw from what I concluded.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.report.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.report"]}]}
+A short report with room for questions. Completeness need not be a wall.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.instruction.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.instruction","a1"]}]}
+You chose "Repeat it back". A chance for both people to correct a misunderstanding.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.instruction.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.instruction","a2"]}]}
+You chose "Begin carefully". Then stop if the first step does not fit.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.instruction.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.instruction"]}]}
+Repeat the part with consequences before beginning.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.fair_turn.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.fair_turn","a1"]}]}
+You chose "Equal time". A clear starting rule.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.fair_turn.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.fair_turn","a2"]}]}
+You chose "More where it is needed". Then the reason should be explained without embarrassing the person.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.fair_turn.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.fair_turn"]}]}
+Equal opportunity to ask for what is needed. I am still learning the difference.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.invite.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.invite","a1"]}]}
+You chose "Exact time and place". I can make the path clear.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.invite.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.invite","a2"]}]}
+You chose "Offer two choices". A manageable amount of freedom. Thank you for limiting the list.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.invite.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.invite"]}]}
+Two choices, and permission to propose a third.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.practice_voice.a1 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.practice_voice","a1"]}]}
+You chose "Tell you gently". I would prefer to know before repeating it.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad4_a.practice_voice.a2 role=role:squad4_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.practice_voice","a2"]}]}
+You chose "Wait until we are alone". That is considerate. I will listen then.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad4_a.practice_voice.back role=role:squad4_a stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad4_a","q.cast.squad4_a.practice_voice"]}]}
+Gently, when it happens. I cannot hear the whole effect from inside the sentence.

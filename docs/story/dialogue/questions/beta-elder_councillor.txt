@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.form | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A confusing form: ask at the desk or take time to read it?
+- Ask at the desk :: Then we must explain without making you feel hurried. {tone:honest}
+- Read it first :: Take the chair. I shall keep your place in the queue. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.garden_path | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A garden path: straight to the gate or round the tree?
+- Straight to the gate :: Useful in the rain. We should still leave the roots enough room. {tone:honest}
+- Round the tree :: Then the turn should have somewhere to rest. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.queue | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Somebody cannot stand in the queue. Save a place or bring a chair?
+- Save their place :: A clear token, so they need not explain the same difficulty twice. {tone:honest}
+- Bring a chair :: A practical amendment to our procedure. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.seal | fn: deepen_bond reveal_character | level: 2 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Explain a seal before the signature or after reading the whole paper?
+- Explain it first :: Then the visitor knows what the signature will do. {tone:honest}
+- Read the whole paper :: Nothing hidden below the part that seems important. Sensible. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.guest | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A guest says they need nothing. Offer again or leave something nearby?
+- Offer once more :: With room for a real refusal. Hospitality should not be an argument. {tone:honest}
+- Leave a cup nearby :: Quiet provision. I can respect that. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.rule_change | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A small rule inconveniences many people. Change it or hear from them first?
+- Change it promptly :: Then we must still listen to the people the change affects. {tone:honest}
+- Hear from them first :: Ask the people least likely to attend the meeting as well. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.minutes | fn: deepen_bond reveal_character | level: 3 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Meeting notes: every word or the decisions with reasons?
+- Every word :: A substantial task. It must remain readable afterwards. {tone:honest}
+- Decisions and reasons :: Name the disagreement too, or the reason may look easier than it was. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.second_view | fn: deepen_bond reveal_character | level: 4 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Two neighbours disagree. Hear them together or separately first?
+- Together :: A shared room, with enough time that neither must compete for the last sentence. {tone:honest}
+- Separately first :: Then make clear what will be repeated when we meet again. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.names_paper | fn: deepen_bond reveal_character | level: 4 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A file number is useful. Should a name always go beside it?
+- Yes, for the person :: In clear writing, large enough to be the first thing seen. {tone:honest}
+- Ask how they wish to be called :: A sensible question we too often assume is answered. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.elder_councillor.good_order | fn: deepen_bond reveal_character | level: 5 | tags: role=role:elder_councillor stage=adult player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: In good order: does that mean tidy, or that people can use it?
+- Tidy enough to find things :: A useful kind of tidiness, then. {tone:honest}
+- People can use it :: Even if the desk ends the day untidy. I concede the point. {tone:gentle}

@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.breakfast.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.breakfast","a1"]}]}
+You wanted to split the rice ball. Grandma packed two this time, to prevent diplomacy.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.breakfast.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.breakfast","a2"]}]}
+You raced for the last rice ball. The pup won by staying with the food.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.judge.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.judge","a1"]}]}
+You trusted the pup as judge. I have explained that cheering for me is not a ruling.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.judge.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.judge","a2"]}]}
+You asked for a second judge. I picked somebody who does not fit in my jacket.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.mud.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.mud","a1"]}]}
+You chose the muddy shortcut. I brought a brush before bringing an excuse.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.mud.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.mud","a2"]}]}
+You wanted the dry path. I used the extra walk to tell you the entire story.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.cheer.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.cheer","a1"]}]}
+You asked for loud cheering. I saved enough voice for your last try.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.cheer.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.cheer","a2"]}]}
+You wanted quiet until the end. I nearly vibrated out of my sandals, but I waited.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.lost_tool.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.lost_tool","a1"]}]}
+You chose a notice for the lost tool. Somebody came with the matching case.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.lost_tool.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.lost_tool","a2"]}]}
+You wanted to find the owner ourselves. We met half the street before lunch.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.nickname.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.nickname","a1"]}]}
+You agreed to trade nicknames. I am still defending mine from Grandma.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.nickname.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.nickname","a2"]}]}
+You wanted to approve the nickname first. I have several terrible proposals ready.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.roofs.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.roofs","a1"]}]}
+You picked the straight run. I practised starting without tripping over excitement.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.roofs.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.roofs","a2"]}]}
+You wanted the tricky landing. I checked the tiles before calling it a race.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.late.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.late","a1"]}]}
+You said you would come looking if I was late. I left a message with the stallkeeper.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.late.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.late","a2"]}]}
+You would wait at our meeting place. I stopped changing the meeting place in my head.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.whole_team.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.whole_team","a1"]}]}
+You wanted every helper named. I remembered the person who lent the bucket.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.whole_team.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.whole_team","a2"]}]}
+You said one person could have the moment. I cheered first and made the introductions after.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.small_help.a1 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.small_help","a1"]}]}
+You said the small help counted. I put the spare cup out before anyone asked.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.teammate_b.small_help.a2 role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.small_help","a2"]}]}
+You wanted the small help noticed. I told Grandma who carried the other end.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.breakfast.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.breakfast"]}]}
+Split it. Then race for something that does not get cold.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.judge.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.judge"]}]}
+Only if the judge cannot eat the prize. We have had problems.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.mud.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.mud"]}]}
+Mud on the way out. Dry path home. I am learning consequences.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.cheer.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.cheer"]}]}
+Loud for me. Unless I am trying to sneak. Then please whisper very loudly.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.lost_tool.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.lost_tool"]}]}
+Look for a bit, then the notice. The pup can be in charge of looking interested.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.nickname.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.nickname"]}]}
+Yes, if I get to object before the entire market hears it.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.roofs.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.roofs"]}]}
+A good landing. Fast is better when I get to keep my ankles.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.late.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.late"]}]}
+I wait a little, then leave a note before I look. Two plans!
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.whole_team.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.whole_team"]}]}
+Everybody. The pup will insist on being included anyway.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.teammate_b.small_help.back role=role:teammate_b stage=child player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:teammate_b","q.cast.teammate_b.small_help"]}]}
+Yes. But I like telling the person. Otherwise how do they know I saw?

@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=reveal_character  | when: {"flag":"story.ch1.done"}
+Quick vote: training now, or training after breakfast? The pup votes breakfast!
+There you are! I found a shortcut. It only adds one roof.
+Grandma packed enough for two. The pup is arguing that two means us.
+{player}! Walk faster. I have a very important, completely sensible idea.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+The pup gets a little from my plate. A little! Stop looking at the empty plate.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch1.done"}
+Again! This time you try the feint and I try remembering it is a feint.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch1.done"}
+Roof races have rules. I make most of them up before we finish.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch1.done"}
+Grandma can hear a muddy shoe from the kitchen. That is real sensing.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+If I say I am coming, wait for me. Even if the whole road turns uphill.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch1.done"}
+Start walking. I will come too. Hard things look smaller with more feet.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch1.done"}
+A place where my bowl stays on the shelf even when I am out.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch1.done"}
+Sometimes I talk so fast I miss what you said. Say it again. I am listening.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.roof_race.ask role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+Roof race! No stepping on washing. Grandma made that rule permanent.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.roof_race.arrive role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+The pup is a judge! A completely fair judge who accepts rice balls.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.roof_race.good role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch1.done"}
+You saw that last jump? Tell Grandma the useful part was the landing.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+Passed it! The pup is taking some credit. Fair. There was a lot of cheering.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:teammate_b stage=child player_stage=child story=story.ch1.done fn=react,deepen_bond  | when: {"flag":"story.ch1.done"}
+I missed the mark. Next try, I am bringing less noise and more aim. Some less noise.

@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.edge.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.edge","a1"]}]}
+You chose "Sharpen it now". Keep the angle steady.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.edge.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.edge","a2"]}]}
+You chose "Use the spare". Learn its balance first.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.edge.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.edge"]}]}
+Sharpen. A poor edge charges for every cut.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.coin.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.coin","a1"]}]}
+You chose "Food for today". Training needs a body that can finish it.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.coin.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.coin","a2"]}]}
+You chose "Save for equipment". Know when the saving stops.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.coin.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.coin"]}]}
+Food, then the repair that prevents another purchase.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.practice_hour.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.practice_hour","a1"]}]}
+You chose "One rested hour". Make it work.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.practice_hour.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.practice_hour","a2"]}]}
+You chose "Two careful hours". Stop before the tired form becomes the normal one.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.practice_hour.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.practice_hour"]}]}
+Rested. Time is expensive when the work does not improve.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.repair.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.repair","a1"]}]}
+You chose "A safe cheap repair". Check the part taking the weight.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.repair.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.repair","a2"]}]}
+You chose "Wait for a lasting one". Borrow safely until then.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.repair.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.repair"]}]}
+The repair that holds. Cheap twice is often dear.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.lesson.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.lesson","a1"]}]}
+You chose "Pay a good teacher". Ask what the lesson contains.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.lesson.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.lesson","a2"]}]}
+You chose "Work with a partner". Bring something useful to their practice.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.lesson.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.lesson"]}]}
+The teacher for the gap I cannot see myself.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.target.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.target","a1"]}]}
+You chose "Harder target". Do not let it excuse bad form.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.target.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.target","a2"]}]}
+You chose "Clean first movement". Then keep it when the target changes.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.target.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.target"]}]}
+The movement. It goes to every target with me.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.worn_strap.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.worn_strap","a1"]}]}
+You chose "Replace the strap". Check the buckle too.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.worn_strap.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.worn_strap","a2"]}]}
+You chose "Lighten the load". Say what you left behind.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.worn_strap.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.worn_strap"]}]}
+Replace it. A dropped tool costs more than the strap.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.free_time.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.free_time","a1"]}]}
+You chose "Rest some of it". Enough to return useful.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.free_time.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.free_time","a2"]}]}
+You chose "Take the work". Count the time it takes from training.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.free_time.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.free_time"]}]}
+Work first, with a real end to it. Otherwise free time disappears without paying.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.show_work.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.show_work","a1"]}]}
+You chose "Explain the useful part". Not the speech about how hard it was.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.show_work.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.show_work","a2"]}]}
+You chose "Show the technique". Then repeat it cleanly.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.show_work.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.show_work"]}]}
+Show, then explain what another person can use.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.debt.a1 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.debt","a1"]}]}
+You chose "Money if useful". Ask what the work was worth.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_c.debt.a2 role=role:squad5_c stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.debt","a2"]}]}
+You chose "Time at a clear task". Name the day.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_c.debt.back role=role:squad5_c stage=child player_stage=child story=story.ch7.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_c","q.cast.squad5_c.debt"]}]}
+Ask. My preferred payment may not be theirs.

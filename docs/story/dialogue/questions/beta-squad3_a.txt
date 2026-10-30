@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.opening | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A familiar opening or a new problem?
+- The familiar one :: Then I can measure what changed in your reply. {tone:honest}
+- A new problem :: Good. I have three. We will start with the shortest. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.list | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Write the list or remember it?
+- Write it down :: One less task for a busy head. {tone:honest}
+- Remember the essentials :: Tell me which ones you cannot afford to lose. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.first_move | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Move first or watch the opening?
+- Move first :: Then your opening needs a purpose. {tone:honest}
+- Watch the opening :: Do not wait so long that waiting becomes the whole plan. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.spare_plan | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: One detailed plan or two simple ones?
+- One detailed plan :: Mark where it stops being reliable. {tone:honest}
+- Two simple ones :: Name what would make us switch. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.notes | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Record the mistake or the move that fixed it?
+- The mistake :: Include what you expected to happen. {tone:honest}
+- The correction :: Include why it worked, not just where the piece went. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.timer | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Think with a timer or without one?
+- Use a timer :: We can see where the time is actually going. {tone:honest}
+- No timer today :: Then we finish one position properly. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.map_edge | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A map ends. Stop or sketch the next stretch?
+- Stop and check :: A sensible use of an unknown edge. {tone:honest}
+- Sketch carefully :: Mark that it is a sketch, not a promise. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.surprise | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A surprising move: ask why or look for its consequence?
+- Ask why :: After I have made one prediction of my own. {tone:honest}
+- Look for the consequence :: Then compare it with what the player intended. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.team_plan | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Who gets to question a plan?
+- Everybody using it :: One at a time, with the part that worries them. {tone:honest}
+- The person who sees a risk :: They must be able to speak before the risk becomes a fact. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_a.blank_line | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad3_a stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Leave a blank line in the plan?
+- For new information :: Label the gap so nobody mistakes it for forgetting. {tone:honest}
+- No, add a second page :: Keep the second page where we can actually find it. {tone:gentle}

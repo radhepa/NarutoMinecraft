@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.road_food | fn: deepen_bond reveal_character | level: 2 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: Road food: lighter pack or a better lunch?
+- Lighter pack :: Then I know a stall that wraps the rice without the extra box. {tone:honest}
+- Better lunch :: Excellent. We can argue about the weight after eating. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.bargain | fn: deepen_bond reveal_character | level: 2 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: A bargain you need today or a finer thing you might need later?
+- What I need today :: Good. A cheap future problem still occupies a shelf. {tone:honest}
+- Save for the finer thing :: Then know where the saving ends. Markets will happily keep moving it. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.weather | fn: deepen_bond reveal_character | level: 2 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: Rain on the road: wait under cover or keep a steady pace?
+- Wait under cover :: Check the roof before praising it. An important detail. {tone:honest}
+- Keep moving carefully :: Shorten the load straps. Wet wheels dislike surprises. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.market_look | fn: deepen_bond reveal_character | level: 2 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: First circuit of a market: compare prices or talk to the makers?
+- Compare prices :: Count the size as well as the number. Tiny cabbages can be very persuasive. {tone:honest}
+- Talk to the makers :: Ask which part takes the longest. That tells you something a price cannot. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.customer | fn: deepen_bond reveal_character | level: 3 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: A customer changes their mind. Return the money or offer another item?
+- Return the money :: Clean account. A person can come back without needing an excuse. {tone:honest}
+- Offer an alternative :: Once, without trapping them in a conversation they did not buy. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.cart | fn: deepen_bond reveal_character | level: 3 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: A cart creaks. Mend it before loading or test it empty?
+- Mend it first :: A creak has earned a little attention. {tone:honest}
+- Test it empty :: Good. Listen while somebody else watches the wheel. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.free_help | fn: deepen_bond reveal_character | level: 3 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: Somebody helps unload. Pay them or return the favour?
+- Pay them fairly :: Ask the time it took. I ought to ask more often. {tone:honest}
+- Return the favour :: Name the day, or the favour can wander off down the road. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.story | fn: deepen_bond reveal_character | level: 4 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: Road story: the useful version or the entertaining one?
+- Useful version :: Here is the turn where the milestone points at the wrong fork. {tone:honest}
+- Entertain me :: A fine choice. The cart will be much larger in this telling. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.shop_window | fn: deepen_bond reveal_character | level: 4 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: A future shop: put the wares outside or leave a place to sit?
+- Wares outside :: A good display should leave enough pavement for the people who will not buy. {tone:honest}
+- A place to sit :: Customers with time. Dangerous for my entire stock of stories. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.merchant.fair_price | fn: deepen_bond reveal_character | level: 5 | tags: role=role:merchant stage=adult player_stage=child story=story.ch11.done | when: {"flag":"story.ch11.done"}
+Q: A friend wants a discount. Lower the price or explain the cost?
+- Lower it if I can :: A gift entered honestly in the account. I can understand that. {tone:honest}
+- Explain the cost :: Then the friend knows what cannot be made cheaper. {tone:gentle}

@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.offcut | fn: deepen_bond reveal_character | level: 2 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: This small offcut: a game piece or a cup rest?
+- A game piece :: It has a fine little grain. We can mark the sides. {tone:honest}
+- A cup rest :: Useful, and only a little crooked. That describes most of my work. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.bench | fn: deepen_bond reveal_character | level: 2 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Should a bench face the path or the river?
+- The path :: People-watching. We need a sturdy back for leaning over gossip. {tone:honest}
+- The river :: Then the seat needs to dry quickly after rain. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.measure | fn: deepen_bond reveal_character | level: 2 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Measure twice or make a practice piece?
+- Measure twice :: Cheaper in wood. It costs a little patience. {tone:honest}
+- Make a practice piece :: Good if the shape is new. We can keep it as a pattern. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.useful_gift | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A useful gift: ask what is needed or surprise the person?
+- Ask what is needed :: Then I will know where the handle ought to go. {tone:honest}
+- Make it a surprise :: I will still look at what they reach for every day. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.repair | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Keep the patch visible or hide the repair?
+- Let the patch show :: I like seeing where somebody cared enough to mend it. {tone:honest}
+- Make it blend in :: Then I will follow the grain. That takes longer. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.table_noise | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: At a crowded meal, talk over the noise or find a quiet corner?
+- Join the noise :: Mum will hear you from the kitchen. Somehow. {tone:honest}
+- A quieter corner :: I can carry two bowls. We will still be at the meal. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.tools | fn: deepen_bond reveal_character | level: 3 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Lend a good tool or teach with a spare?
+- Lend the good one :: I will show how the grip works before handing it over. {tone:honest}
+- Start with a spare :: Then a slip will not feel like ruining somebody's favourite. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.crooked | fn: deepen_bond reveal_character | level: 4 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A thing is crooked but works. Fix it now or leave it a while?
+- Fix it now :: Before everybody learns to lean the other way. Sensible. {tone:honest}
+- Leave it for now :: As long as nobody will get hurt. I can make a note. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.home_sound | fn: deepen_bond reveal_character | level: 4 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: What sound makes a place feel lived in?
+- People making food :: Chopping from the kitchen. Yes. Somebody expects company. {tone:honest}
+- Someone working nearby :: A saw in the next room means somebody is staying for the afternoon. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.classmate_c.lasting | fn: deepen_bond reveal_character | level: 5 | tags: role=role:classmate_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: If something lasts for years, does the maker need to be remembered?
+- Remember the maker :: I would put a small mark where it would not get in the way. {tone:honest}
+- Let the thing be enough :: People using it is a kind of memory too. {tone:gentle}

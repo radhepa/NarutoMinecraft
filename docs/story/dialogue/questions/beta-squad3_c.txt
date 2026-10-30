@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.flower | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A flower for its colour or its meaning?
+- Its colour :: Then say so. Meanings are not instructions. {tone:honest}
+- Its meaning :: Check whether the receiver knows the same one. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.quiet | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you rather I ask about a mood or leave it alone?
+- Ask quietly :: You can decline. That is an answer. {tone:honest}
+- Leave it alone :: I will not make the silence a question. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.signal | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A hand signal or a spoken warning?
+- Hand signal :: Check the other person can see it. {tone:honest}
+- Spoken warning :: Make the important word first. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.first_read | fn: reveal_character deepen_bond | level: 2 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Trust a first impression or check another detail?
+- Check another detail :: A useful habit. Choose one that could change your mind. {tone:honest}
+- Keep the first in mind :: Keep it separate from what you actually know. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.gift | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Give flowers openly or leave them with a note?
+- Give them openly :: Then the receiver can ask what you meant. {tone:honest}
+- Leave a note :: Sign it if you want the meaning to arrive intact. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.wrong_read | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: If I misunderstand you, correct me or wait?
+- I will correct you :: Good. I would rather update the reading. {tone:honest}
+- Give you a moment :: I may still need the correction after the moment. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.colour | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Bright flowers or ones that open slowly?
+- Bright ones :: Easy to find across a room. {tone:honest}
+- Slow-opening ones :: Then the gift changes after it arrives. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.observation | fn: reveal_character deepen_bond | level: 3 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Say what you noticed or ask a question first?
+- Say what I noticed :: Keep the observation separate from the explanation. {tone:honest}
+- Ask first :: Then leave room for an unexpected answer. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.care | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A reminder someone came home or a reason they left?
+- Tell me they came home :: A clear fact. It can carry enough. {tone:honest}
+- Ask why they left :: Ask the person, not the empty chair. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.squad3_c.certainty | fn: reveal_character deepen_bond | level: 4 | tags: role=role:squad3_c stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Can you be kind without being certain?
+- Yes, begin small :: A cup of water does not need a complete theory. {tone:honest}
+- Ask what would help :: Then listen without replacing the answer. {tone:gentle}

@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.position.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.position","a1"]}]}
+You chose to walk beside me. I stopped getting a whole pace ahead.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.position.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.position","a2"]}]}
+You wanted somebody watching ahead. I kept close enough to hear you.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.footwork.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.footwork","a1"]}]}
+You watched the lead foot. Your correction made the turn quieter.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.footwork.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.footwork","a2"]}]}
+You chose the following foot. I had not noticed how often it dragged.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.moon.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.moon","a1"]}]}
+You chose the platform. I checked which boards keep the evening chill.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.moon.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.moon","a2"]}]}
+You wanted the riverbank. The reflection stayed longer than the moon between the clouds.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.call.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.call","a1"]}]}
+You wanted openings called early. I started hearing where my guard had already moved.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.call.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.call","a2"]}]}
+You chose to compare after the strike. We had noticed different parts of the same turn.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.knots.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.knots","a1"]}]}
+You asked me to check the knot. I liked that neither of us had to pretend it was an insult.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.knots.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.knots","a2"]}]}
+You wanted to show the knot yourself. I waited, and you found the twist.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.wait.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.wait","a1"]}]}
+You wanted a visible place to wait. I stood where the bend opens.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.wait.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.wait","a2"]}]}
+You chose to walk back. The path felt shorter with somebody returning along it.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.practice_day.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.practice_day","a1"]}]}
+You chose the weak form. It stopped being the one you avoided.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.practice_day.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.practice_day","a2"]}]}
+You wanted the form you enjoy. I noticed how much steadier it made your next attempt.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.warning.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.warning","a1"]}]}
+You wanted a quiet warning. I got close enough to give it before the drill started.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.warning.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.warning","a2"]}]}
+You wanted the warning clear to everyone. We changed the drill together.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.guard_work.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.guard_work","a1"]}]}
+You said the quiet watch counted. I stopped apologising for having no exciting report.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.guard_work.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.guard_work","a2"]}]}
+You thought a quiet watch could teach. I started keeping track of the ordinary sounds.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.promise_size.a1 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.promise_size","a1"]}]}
+You chose the promise you could keep. I have been trying to make mine clear and possible.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.classmate_d.promise_size.a2 role=role:classmate_d stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.promise_size","a2"]}]}
+You wanted the difficult promise made honestly. I said what I could not guarantee.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.position.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.position"]}]}
+Side by side when the path allows it. I can see you without turning.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.footwork.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.footwork"]}]}
+The following one. It tells me whether the person can change their mind.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.moon.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.moon"]}]}
+The platform, with a clear way down before we get sleepy.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.call.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.call"]}]}
+Before when teaching. After when we both need to learn.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.knots.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.knots"]}]}
+No. I would rather have the knot hold than have my pride hold.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.wait.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.wait"]}]}
+Walk back, unless moving would make us lose each other.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.practice_day.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.practice_day"]}]}
+The weak form, then one I know. I like ending with my feet sure.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.warning.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.warning"]}]}
+Quiet if it is a correction. Loud if somebody is about to get hurt.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.guard_work.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.guard_work"]}]}
+Yes. I want the people passing to be bored enough to stop looking over their shoulders.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.classmate_d.promise_size.back role=role:classmate_d stage=child player_stage=child story=story.ch1.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:classmate_d","q.cast.classmate_d.promise_size"]}]}
+I ask what the person needs before choosing how brave I want to sound.

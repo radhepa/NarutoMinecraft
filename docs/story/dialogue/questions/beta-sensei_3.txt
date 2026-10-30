@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.shade | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Sunlit bench or a little shade?
+- The sunlight :: We can move when the stone gets too warm. {tone:honest}
+- A little shade :: There is room beside the roots. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.seedling | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: A struggling seedling: more water or check the ground?
+- Try more water :: A little, then wait long enough to see what changed. {tone:honest}
+- Check the ground :: Sometimes the roots need room rather than another cup. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.notice | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: A picture seems wrong. Look away or examine one edge?
+- Look away briefly :: Rest can give the eye a truer first look. {tone:honest}
+- Examine the edge :: A small certain thing can help the whole picture settle. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.quiet_company | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Talk while walking or let the path keep us company?
+- Talk a little :: Tell me the small thing you noticed today. {tone:honest}
+- Let the path speak :: Then we can point things out without filling every silence. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.prune | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Trim the branch now or watch another day?
+- Trim it carefully :: Then keep the cut small enough for the tree to bear. {tone:honest}
+- Watch another day :: Make a note of what you are waiting to learn. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.lesson_pace | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Repeat slowly or try a new example?
+- Slow repetition :: We can notice where the shape begins to change. {tone:honest}
+- A new example :: A different picture sometimes frees a tired thought. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.gardener | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Would you rather plant or tend what is growing?
+- Plant something :: Choose a place you can return to water. {tone:honest}
+- Tend what is there :: A useful kindness. The beginning is only one part of growing. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.rest | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Rest alone or with somebody sitting nearby?
+- Alone for a while :: I will tell you when I intend to come back. {tone:honest}
+- Somebody nearby :: I can bring work that needs no talking. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.weather_change | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: Change the plan for rain or keep a sheltered version?
+- Change the plan :: We can find an afternoon that suits what the day became. {tone:honest}
+- A sheltered version :: Leave room for the part that cannot be sheltered. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_3.patience | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_3 stage=adult player_stage=child story=story.ch10.done | when: {"flag":"story.ch10.done"}
+Q: How do you know when waiting has become avoiding?
+- Set a time to return :: A gentle boundary can help. {tone:honest}
+- Ask someone to notice :: Choose somebody who can tell you kindly and clearly. {tone:gentle}

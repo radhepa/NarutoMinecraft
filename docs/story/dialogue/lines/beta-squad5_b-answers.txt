@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.step.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.step","a1"]}]}
+Quiet step. Your choice. I used it at the bend.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.step.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.step","a2"]}]}
+Quick step, as you wanted. Balanced.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.step.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.step"]}]}
+Quiet. Speed follows.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.signal.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.signal","a1"]}]}
+Pointing worked. You saw the warning.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.signal.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.signal","a2"]}]}
+Your whisper reached me. One word was enough.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.signal.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.signal"]}]}
+Point, with an agreed meaning.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.lantern.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.lantern","a1"]}]}
+Trimmed early, as you said. Clean light.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.lantern.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.lantern","a2"]}]}
+You wanted the wick checked before lighting. Done.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.lantern.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.lantern"]}]}
+Now. Dark hands make poor measurements.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.path.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.path","a1"]}]}
+Known route. Checked it, like we agreed.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.path.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.path","a2"]}]}
+You chose the new turn. Return mark is there.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.path.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.path"]}]}
+Known, until there is a reason.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.company.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.company","a1"]}]}
+Beside you. Same pace as before.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.company.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.company","a2"]}]}
+You wanted me behind. Other side covered.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.company.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.company"]}]}
+Beside. Different sides, same pace.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.notice.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.notice","a1"]}]}
+Told the next worker. Your way.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.notice.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.notice","a2"]}]}
+Left it finished. You noticed.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.notice.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.notice"]}]}
+Tell the next worker. No speech needed.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.rain.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.rain","a1"]}]}
+Kept the eave clear, as you asked.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.rain.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.rain","a2"]}]}
+You chose the rain. Wrapped the paper first.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.rain.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.rain"]}]}
+The eave, until the wind changes.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.message.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.message","a1"]}]}
+Your short message arrived. Time included.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.message.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.message","a2"]}]}
+The sign held. You chose a clear one.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.message.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.message"]}]}
+Whichever survives the weather.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.waiting.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.waiting","a1"]}]}
+Waited where you could see. Your request.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.waiting.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.waiting","a2"]}]}
+Mark left out of the way. Your plan worked.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.waiting.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.waiting"]}]}
+In sight of the person waiting for me.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.thanks.a1 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.thanks","a1"]}]}
+A few words. Heard your thanks.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad5_b.thanks.a2 role=role:squad5_b stage=child player_stage=child story=story.ch7.done fn=callback | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.thanks","a2"]}]}
+You chose another task. The useful one got done.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad5_b.thanks.back role=role:squad5_b stage=child player_stage=child story=story.ch7.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch7.done"},{"answered":["role:squad5_b","q.cast.squad5_b.thanks"]}]}
+The task. Tell the worker it is done.

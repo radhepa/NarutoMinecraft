@@ -1,0 +1,59 @@
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.weather_bet | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Rain before noon, or clear until supper?
+- Rain before noon :: A cautious forecast. I will put the notebook under my vest. {tone:honest}
+- Clear until supper :: Then I shall enjoy being wrong in dry clothes. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.relay | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Speed round or a neat relay handoff?
+- Speed round :: A clean handoff still counts as part of being fast. {tone:honest}
+- Neat handoff :: A victory for everyone who has ever chased a dropped baton. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.stake | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Small wager or just the challenge?
+- A small wager :: Lunch-sized. Nobody owes a week of meals for a wet sandal. {tone:honest}
+- Just the challenge :: Fine. Pride has an excellent credit system. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.record | fn: reveal_character deepen_bond | level: 2 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Record the near win or only the result?
+- The near win too :: The margin has room. An important design feature. {tone:honest}
+- Only the result :: Merciless bookkeeping. I admire the economy. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.rematch | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Immediate rematch or time to practise?
+- Immediate :: Then tell me what you intend to change. {tone:honest}
+- Time to practise :: Name the afternoon. I know where to find a witness. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.teasing | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: A joke before the drill or once the work is done?
+- Before :: Then I have to make sure you heard the instruction too. {tone:honest}
+- Afterwards :: A disciplined audience. The joke will have to improve. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.finish_line | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Beat the bell or finish beside the person learning?
+- Beat the bell :: Then come back and show which turn saved the step. {tone:honest}
+- Finish together :: A very inconvenient answer for a wager. A good one for a lesson. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.nickname | fn: reveal_character deepen_bond | level: 3 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: A nickname earned by skill or by a ridiculous mistake?
+- By skill :: A useful standard. I shall have to invent fewer examples. {tone:honest}
+- By a harmless mistake :: Then the owner gets a vote before the name leaves the yard. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.margin | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Leave room in a notebook for corrections?
+- Plenty of room :: An answer from someone expecting to learn. Dangerous habit. {tone:honest}
+- Keep a second page :: Then tie the pages together before the wind gives an opinion. {tone:gentle}
+
+# bond: supplementary beta question; no scripted plot flag is set.
+? q.cast.sensei_2.serious | fn: reveal_character deepen_bond | level: 4 | tags: role=role:sensei_2 stage=adult player_stage=child story=story.ch8.done | when: {"flag":"story.ch8.done"}
+Q: Can you tell when I have stopped joking?
+- Your words get shorter :: Then you know which part to hear the first time. {tone:honest}
+- I check what changed :: Good. Watch the people, not just my face. {tone:gentle}

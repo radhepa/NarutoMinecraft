@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.load | fn: deepen_bond reveal_character | level: 2 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: Carry the light end or help me balance the heavy one?
+- The light end :: Keep it level. That helps more than you think. {tone:honest}
+- Balance the heavy end :: On my count. We can set it down at the next stair. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.stairs | fn: deepen_bond reveal_character | level: 2 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: Pause at every landing or make one longer stop?
+- Every landing :: Good. We can check the grip while it is still a grip. {tone:honest}
+- One longer stop :: Tell me before the fingers get tired. Not after. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.door | fn: deepen_bond reveal_character | level: 2 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: A sticky door: oil the hinge or find where the wood catches?
+- Oil the hinge first :: A little. Too much leaves the next person's sleeve with a job. {tone:honest}
+- Find the catching edge :: Here. See the rubbed bit? That tells us where it touches. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.knock | fn: deepen_bond reveal_character | level: 2 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: Delivering during a nap: knock softly or leave a note?
+- A soft knock :: Then wait. A sleepy person needs time to find the room. {tone:honest}
+- Leave a note :: Somewhere they will see it. I can bring the parcel round later. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.chair | fn: deepen_bond reveal_character | level: 3 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: A wobbly chair: mark it or move it out of the way?
+- Mark it clearly :: I will put a cloth across the seat until it is mended. {tone:honest}
+- Move it aside :: Somewhere a tired person will not mistake it for a spare seat. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.request | fn: deepen_bond reveal_character | level: 3 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: Do you mind if I ask for help before the stairs?
+- Ask now :: Thank you. I am trying to do that more often. {tone:honest}
+- Tell me what needs doing :: The corner catches at the turn. I need eyes there. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.first_room | fn: deepen_bond reveal_character | level: 3 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: One thing for an empty room: a shelf or a seat?
+- A shelf :: Somewhere a thing can stay when you go outside. {tone:honest}
+- A seat :: A place to stop carrying yourself about. That is useful. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.thanks | fn: deepen_bond reveal_character | level: 3 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: After carrying something, do you like thanks or a cup of water?
+- Say thanks :: I like knowing it arrived where it was wanted. {tone:honest}
+- A cup of water :: Yes. I forget until someone offers. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.weight | fn: deepen_bond reveal_character | level: 4 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: If something is heavier than expected, say so or quietly change your grip?
+- Say it :: Then the other person knows to move with you. {tone:honest}
+- Change the grip first :: Small change. Tell me if you need more room. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.porter.home_thing | fn: deepen_bond reveal_character | level: 5 | tags: role=role:porter stage=adult player_stage=child story=story.ch1.done | when: {"all":[{"flag":"story.ch1.done"},{"not":{"flag":"story.ch28.done"}}]}
+Q: What makes a room feel ready for somebody?
+- Their things have a place :: A hook at the right height. A drawer that opens easily. {tone:honest}
+- Someone expects them :: Then I can leave the chair turned towards the door. {tone:gentle}

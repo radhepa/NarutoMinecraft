@@ -1,0 +1,119 @@
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.bookmark.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.bookmark","a1"]}]}
+You preferred the ribbon bookmark. I tied one where it would not strain the binding.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.bookmark.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.bookmark","a2"]}]}
+You chose the paper slip. The question on it helped find where we stopped.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.reading_place.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.reading_place","a1"]}]}
+You chose the window. I moved the chair before the afternoon glare arrived.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.reading_place.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.reading_place","a2"]}]}
+You preferred the lamp. I left the safer shade beside your table.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.index.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.index","a1"]}]}
+You wanted the title first. You found the neighbouring volume without my help.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.index.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.index","a2"]}]}
+You chose to browse. That unexpected shelf answered a better question.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.aloud.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.aloud","a1"]}]}
+You chose a silent first reading. The second one let you hear the rhythm for yourself.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.aloud.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.aloud","a2"]}]}
+You asked to hear the passage. The punctuation finally sounded like advice.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.old_copy.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.old_copy","a1"]}]}
+You wanted a clean copy. We compared the edition before trusting the fresh cover.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.old_copy.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.old_copy","a2"]}]}
+You chose the annotated book. Finding its reader became part of understanding the page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.ending.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.ending","a1"]}]}
+You chose the ending first. You saw the small promise in the opening paragraph.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.ending.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.ending","a2"]}]}
+You wanted the journey. I stopped myself from pointing at the final shelf mark.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.borrowed_note.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.borrowed_note","a1"]}]}
+You wanted the note to stay near the passage. I made a sleeve so it could be removed safely.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.borrowed_note.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.borrowed_note","a2"]}]}
+You brought the note to the desk. Its writer had remembered the words and forgotten the page.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.question_mark.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.question_mark","a1"]}]}
+You marked the doubtful part in your notes. It was easy to check when we found another source.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.question_mark.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.question_mark","a2"]}]}
+You wanted another reader for the doubtful line. The disagreement made us check the date.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.recommendation.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.recommendation","a1"]}]}
+You shared your favourite. Your explanation found a reader the catalogue would have missed.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.recommendation.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.recommendation","a2"]}]}
+You chose a book for the reader. The small question you asked mattered more than the shelf mark.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.unfinished_book.a1 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.unfinished_book","a1"]}]}
+You put the difficult book aside. I kept the bookmark so returning would be easy.
+
+# callback: remembers only the option actually chosen.
+## callback.answer.q.cast.librarian.unfinished_book.a2 role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=callback | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.unfinished_book","a2"]}]}
+You chose one paragraph instead of the whole book. We understood it well enough to ask about the next.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.bookmark.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.bookmark"]}]}
+Paper, because I am always writing questions I cannot finish at the desk.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.reading_place.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.reading_place"]}]}
+The window until the weather changes, then a lamp and an unreasonable number of notes.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.index.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.index"]}]}
+The catalogue, followed by the shelf beside the one I intended.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.aloud.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.aloud"]}]}
+Aloud, softly. I find the sentence I thought I understood was missing a word.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.old_copy.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.old_copy"]}]}
+The old one, with the clean one beside it if I can carry both.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.ending.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.ending"]}]}
+The journey. Though I have been known to check whether the animal gets home.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.borrowed_note.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.borrowed_note"]}]}
+The desk first. We can keep a copy beside the passage if the writer agrees.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.question_mark.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.question_mark"]}]}
+On my notes, with a reason. Otherwise tomorrow I am only arguing with yesterday's punctuation.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.recommendation.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.recommendation"]}]}
+One for their question, and my favourite if they have room in the bag.
+
+# bond: the player turns the same question back on the speaker.
+## talk.q.librarian.unfinished_book.back role=role:librarian stage=adult player_stage=child story=story.ch5.done level=5..10 fn=reveal_character | when: {"all":[{"flag":"story.ch5.done"},{"answered":["role:librarian","q.cast.librarian.unfinished_book"]}]}
+One paragraph, then permission to stop. Understanding is poor work when it becomes punishment.

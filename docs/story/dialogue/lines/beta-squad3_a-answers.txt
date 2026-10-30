@@ -1,0 +1,119 @@
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.opening.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.opening","a1"]}]}
+You chose "The familiar one". Then I can measure what changed in your reply.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.opening.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.opening","a2"]}]}
+You chose "A new problem". Good. I have three. We will start with the shortest.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.opening.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.opening"]}]}
+A new problem, after checking I did not merely rename an old one.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.list.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.list","a1"]}]}
+You chose "Write it down". One less task for a busy head.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.list.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.list","a2"]}]}
+You chose "Remember the essentials". Tell me which ones you cannot afford to lose.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.list.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.list"]}]}
+Write it. Memory can work on the unexpected part.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.first_move.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.first_move","a1"]}]}
+You chose "Move first". Then your opening needs a purpose.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.first_move.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.first_move","a2"]}]}
+You chose "Watch the opening". Do not wait so long that waiting becomes the whole plan.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.first_move.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.first_move"]}]}
+Watch one move, then commit to learning something.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.spare_plan.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.spare_plan","a1"]}]}
+You chose "One detailed plan". Mark where it stops being reliable.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.spare_plan.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.spare_plan","a2"]}]}
+You chose "Two simple ones". Name what would make us switch.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.spare_plan.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=2..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.spare_plan"]}]}
+Two, with a clear reason to change. I am practising that last part.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.notes.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.notes","a1"]}]}
+You chose "The mistake". Include what you expected to happen.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.notes.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.notes","a2"]}]}
+You chose "The correction". Include why it worked, not just where the piece went.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.notes.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.notes"]}]}
+Both, on the same page. Otherwise tomorrow I solve the wrong problem.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.timer.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.timer","a1"]}]}
+You chose "Use a timer". We can see where the time is actually going.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.timer.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.timer","a2"]}]}
+You chose "No timer today". Then we finish one position properly.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.timer.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.timer"]}]}
+Timer for practice. No timer when teaching somebody the rules.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.map_edge.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.map_edge","a1"]}]}
+You chose "Stop and check". A sensible use of an unknown edge.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.map_edge.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.map_edge","a2"]}]}
+You chose "Sketch carefully". Mark that it is a sketch, not a promise.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.map_edge.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.map_edge"]}]}
+Stop long enough to separate what we see from what we hope.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.surprise.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.surprise","a1"]}]}
+You chose "Ask why". After I have made one prediction of my own.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.surprise.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.surprise","a2"]}]}
+You chose "Look for the consequence". Then compare it with what the player intended.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.surprise.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=3..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.surprise"]}]}
+The consequence first. People can have very untidy reasons.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.team_plan.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.team_plan","a1"]}]}
+You chose "Everybody using it". One at a time, with the part that worries them.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.team_plan.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.team_plan","a2"]}]}
+You chose "The person who sees a risk". They must be able to speak before the risk becomes a fact.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.team_plan.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.team_plan"]}]}
+Everybody. A plan has to contain the people, not just their positions.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.blank_line.a1 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.blank_line","a1"]}]}
+You chose "For new information". Label the gap so nobody mistakes it for forgetting.
+
+# callback: only the option the player actually chose.
+## callback.answer.q.cast.squad3_a.blank_line.a2 role=role:squad3_a stage=child player_stage=child story=story.ch1.done fn=callback | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.blank_line","a2"]}]}
+You chose "No, add a second page". Keep the second page where we can actually find it.
+
+# bond: the same question turned back on the speaker.
+## talk.q.squad3_a.blank_line.back role=role:squad3_a stage=child player_stage=child story=story.ch1.done level=4..10 fn=reveal_character | when: {"all":[{"flag":"story.ch1.done"},{"answered":["role:squad3_a","q.cast.squad3_a.blank_line"]}]}
+A line for what I do not know yet. More than one if I am being honest.

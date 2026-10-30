@@ -1,0 +1,59 @@
+# Beta voice from the approved character brief. Spoiler gates apply to every pool.
+# life: first meetings and ordinary visits.
+## greet.personality role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=reveal_character  | when: {"flag":"story.ch5.done"}
+The shelf ladder is occupied. By books, mostly. I am negotiating.
+You may sit by the window. Turn the page before you move the chair.
+A book for today, {player}, or a question that needs several?
+There is a bookmark on the desk. You need not fold that corner.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.food role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch5.done"}
+Lunch stays outside the reading room. A surprising number of pupils believe sauce can be a bookmark.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.training role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=1..10 | when: {"flag":"story.ch5.done"}
+The index is a technique too. Learn it, and you can find the exercise without practising every page.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_hobby role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=2..10 | when: {"flag":"story.ch5.done"}
+I copy interesting handwriting. The untidy ones take more practice than you would think.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_family role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=4..10 | when: {"flag":"story.ch5.done"}
+My grandmother repaired torn pages with rice paste. I still make too much at once.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_values role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch5.done"}
+Write where you found it. Another reader should be able to walk the same path.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.ask_advice role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=5..10 | when: {"flag":"story.ch5.done"}
+Read the sentence before the one that frightened you. And the one after.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_dream role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=6..10 | when: {"flag":"story.ch5.done"}
+A library where a child can reach the first shelf without asking permission.
+
+# bond: the topic opens at the brief's relationship depth.
+## talk.their_worries role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond,reveal_character level=7..10 | when: {"flag":"story.ch5.done"}
+I sometimes answer the question I expected instead of the one you asked. Please correct me.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.library.ask role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch5.done"}
+The quiet table is free. We can each bring something unfinished.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.library.arrive role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch5.done"}
+That margin note is a question. The next reader answered it a year later.
+
+# life/bond: one shared activity, in the role's own register.
+## hangout.library.good role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=deepen_bond level=2..10 | when: {"flag":"story.ch5.done"}
+We did not finish the stack. A good reason to leave the bookmark where it is.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.passed_exam role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=react,deepen_bond  | when: {"flag":"story.ch5.done"}
+You found the passage yourself. Keep the shelf mark; remembering where is half the work.
+
+# bond: responds to learning without claiming an unplayed story beat.
+## life.dream_setback role=role:librarian stage=adult player_stage=child story=story.ch5.done fn=react,deepen_bond  | when: {"flag":"story.ch5.done"}
+A wrong answer with a source can be checked. Bring both, and we will start there.

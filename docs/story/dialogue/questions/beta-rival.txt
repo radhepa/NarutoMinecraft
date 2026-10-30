@@ -1,0 +1,59 @@
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.opponent | fn: deepen_bond reveal_character | level: 2 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A stronger opponent, or one you can practise a clean form against?
+- Stronger opponent :: Then do not call every correction unfair. {tone:honest}
+- Practise the clean form :: Make it clean, then. Repeating a flaw is a strange ambition. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.target | fn: deepen_bond reveal_character | level: 2 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: One difficult target or several easy ones?
+- One difficult target :: You will have to aim instead of celebrating noise. {tone:honest}
+- Several easy ones :: Then make each throw different. Otherwise you have learned one thing several times. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.witness | fn: deepen_bond reveal_character | level: 2 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Want somebody watching your next attempt?
+- Watch me :: Then I expect an attempt worth paying attention to. {tone:honest}
+- Let me practise first :: Fine. Show me the result when you have one. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.pace | fn: deepen_bond reveal_character | level: 3 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Start fast or make the opponent move first?
+- Start fast :: Commit properly. A half charge is merely falling forward. {tone:honest}
+- Make them move :: Then have a reason for the step you are waiting for. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.loss | fn: deepen_bond reveal_character | level: 3 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Lose narrowly or win without learning anything?
+- Lose narrowly :: Then find the narrow part and remove it. {tone:honest}
+- Take the win :: A win has uses. Do not confuse them with improvement. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.equipment | fn: deepen_bond reveal_character | level: 3 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Repair a familiar tool or replace it with a better one?
+- Repair the familiar one :: Check the repair before trusting the habit. {tone:honest}
+- Try the better one :: Use it until the weight stops surprising you. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.challenge | fn: deepen_bond reveal_character | level: 3 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Would you accept a challenge you expect to lose?
+- Yes, to find the gap :: Then come ready to describe the gap afterwards. {tone:honest}
+- After I prepare :: Set a day. Preparation can become an excellent hiding place. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.comparison | fn: deepen_bond reveal_character | level: 4 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Measure yourself against yesterday, or against the best person here?
+- Against yesterday :: Yesterday was not aiming at you. Remember that. {tone:honest}
+- Against the best :: Then study what the best actually does, rather than the rumour. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.instructions | fn: deepen_bond reveal_character | level: 4 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: A teacher changes the drill halfway through. Ask why or adapt first?
+- Ask why :: One clear question. There may be an opponent waiting. {tone:honest}
+- Adapt, then ask :: Show that you noticed the change before calling it clever. {tone:gentle}
+
+# bond: a supplementary beta conversation; remembered by the answer callbacks.
+? q.cast.rival.ordinary_work | fn: deepen_bond reveal_character | level: 5 | tags: role=role:rival stage=child player_stage=child story=story.ch1.done | when: {"flag":"story.ch1.done"}
+Q: Is the boring practice still worth doing when nobody is watching?
+- That is when it matters :: Then your habits might survive an audience. {tone:honest}
+- Sometimes I need a witness :: Choose somebody who sees the work, not somebody who cheers automatically. {tone:gentle}
