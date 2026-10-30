@@ -9,7 +9,11 @@
   },
   "start": "ask_keeper",
   "steps": {
-    "ask_keeper": {"objective": {"type": "talk", "who": "slot:keeper"}, "next": "go_yard"},
-    "go_yard": {"objective": {"type": "go", "place": "slot:yard"}, "next": null}
+    "ask_keeper": {"objective": {"type": "talk", "who": "slot:keeper"},
+                   "on_done": [{"set_flag": ["test.errand.keeper_asked", true]}], "next": "go_yard"},
+    "go_yard": {"objective": {"type": "go", "place": "slot:yard"},
+                "branch": [{"if": {"flag": "test.errand.keeper_asked"}, "next": "go_board"}], "next": null},
+    "go_board": {"objective": {"type": "go", "place": "notice_board"},
+                 "on_done": [{"set_flag": ["test.errand.board_read", true]}], "next": null}
   }
 }

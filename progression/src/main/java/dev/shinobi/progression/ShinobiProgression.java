@@ -2,7 +2,7 @@ package dev.shinobi.progression;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 import dev.shinobi.progression.mission.Json;
-import dev.shinobi.progression.mission.Template;
+import dev.shinobi.progression.Quests.Quest;
 import dev.shinobi.village.ShinobiVillage;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
@@ -33,8 +34,6 @@ public final class ShinobiProgression implements ModInitializer {
     /** The player's journal, saved with the player and kept through death. */
     public static final AttachmentType<Journal> JOURNAL = AttachmentRegistry.create(Identifier.fromNamespaceAndPath(MOD_ID, "journal"),
             b -> b.persistent(Journal.CODEC).copyOnDeath().initializer(() -> Journal.EMPTY));
-    /** A quest's step graph and its title key. */
-    public record Quest(Template template, String title) {}
     /** Quests by id, read from every data pack's {@code quests/} folder when the server starts. */
     public static final Map<String, Quest> QUESTS = new HashMap<>();
 
@@ -46,8 +45,10 @@ public final class ShinobiProgression implements ModInitializer {
             if (s.getTickCount() % 10 == 0) for (var p : s.getPlayerList().getPlayers()) tick(p);
         });
         // Talking: using the resident a talk step names, once per click (the client sends the off hand too after a PASS).
-        // PASS, so the resident's own interaction still runs.
-        UseEntityCallback.EVENT.register((player, level, hand, entity, hit) -> {
+        // In an early phase: VF's own resident listener returns SUCCESS and ends the event, so ours must run first and PASS.
+        var early = Identifier.fromNamespaceAndPath(MOD_ID, "early");
+        UseEntityCallback.EVENT.addPhaseOrdering(early, Event.DEFAULT_PHASE);
+        UseEntityCallback.EVENT.register(early, (player, level, hand, entity, hit) -> {
             if (player instanceof ServerPlayer p && hand == InteractionHand.MAIN_HAND) talked(p, entity.getUUID().toString());
             return InteractionResult.PASS;
         });
@@ -74,8 +75,8 @@ public final class ShinobiProgression implements ModInitializer {
         server.getResourceManager().listResources("quests", id -> id.getPath().endsWith(".json")).forEach((file, resource) -> {
             try (var in = resource.open()) {
                 Map<String, Object> raw = Json.object(new String(in.readAllBytes(), StandardCharsets.UTF_8));
-                var t = Quests.check(raw);
-                QUESTS.put(t.id(), new Quest(t, Json.str(raw.get("title"), "quest." + t.id() + ".title")));
+                var q = Quests.quest(raw);
+                QUESTS.put(q.template().id(), q);
             } catch (IOException | RuntimeException e) {
                 throw new IllegalStateException("Quest file " + file + ": " + e.getMessage(), e);
             }
@@ -98,7 +99,7 @@ public final class ShinobiProgression implements ModInitializer {
             player.sendSystemMessage(Component.translatable("shinobi_progression.quest.cannot", Component.translatable(quest.title()), e.getMessage()));
             return false;
         }
-        player.setAttached(JOURNAL, journal.accept(quest.template(), cast));
+        player.setAttached(JOURNAL, Quests.start(journal, quest, cast));
         player.sendSystemMessage(Component.translatable("shinobi_progression.quest.accepted", Component.translatable(quest.title())));
         return true;
     }
@@ -127,7 +128,7 @@ public final class ShinobiProgression implements ModInitializer {
     }
 
     static void complete(ServerPlayer player, Quest quest) {
-        var next = player.getAttachedOrCreate(JOURNAL).advance(quest.template());
+        var next = Quests.complete(player.getAttachedOrCreate(JOURNAL), quest);
         player.setAttached(JOURNAL, next);
         if (next.done().contains(quest.template().id()))
             player.sendSystemMessage(Component.translatable("shinobi_progression.quest.done", Component.translatable(quest.title())));

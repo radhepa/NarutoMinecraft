@@ -24,18 +24,25 @@ class JournalTest {
         var j = Journal.EMPTY.accept(TWO, Map.of("spot", "anchor:x"));
         assertEquals(Map.of("q", "a"), j.active());
         assertEquals(Map.of("spot", "anchor:x"), j.castOf("q"));
-        j = j.advance(TWO);
+        j = j.advance(TWO, c -> false);
         assertEquals(Map.of("q", "b"), j.active());
-        j = j.advance(TWO);
-        assertEquals(new Journal(Map.of(), Map.of(), List.of("q")), j);
+        j = j.advance(TWO, c -> false);
+        assertEquals(new Journal(Map.of(), Map.of(), List.of("q"), List.of()), j);
         assertSame(j, j.accept(TWO, Map.of()));
-        assertSame(j, j.advance(TWO));
+        assertSame(j, j.advance(TWO, c -> false));
     }
 
     @Test
     void brokenQuestsAreRefused() {
         assertEquals("q", Quests.check(Json.object("{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"objective\": {\"type\": \"go\", \"place\": \"anchor:x\"}}}}")).id());
         for (String bad : List.of(
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"flag\": \"f\"}, \"next\": \"z\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"weather\": \"rain\"}, \"next\": \"a\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"x\", \"begun\"]}, \"next\": \"a\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"x\", null]}, \"next\": \"a\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"branch\": [{\"if\": {\"quest_state\": [\"q\", \"done\"]}, \"next\": \"a\"}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_done\": [{\"give_ryo\": 5}]}}}",
+                "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"on_enter\": [{\"set_flag\": [\"f\", \"yes\"]}]}}}",
                 "{\"id\": 5, \"start\": \"a\", \"steps\": {\"a\": {}}}",
                 "{\"id\": \"q\", \"start\": \"b\", \"steps\": {\"a\": {}}}",
                 "{\"id\": \"q\", \"start\": \"a\", \"steps\": {\"a\": {\"next\": 5}}}",
@@ -56,6 +63,28 @@ class JournalTest {
         var old = Journal.CODEC.parse(JsonOps.INSTANCE, JsonParser.parseString("{\"active\": {\"q\": \"a\"}, \"done\": []}")).getOrThrow();
         assertEquals(Map.of("q", "a"), old.active());
         assertEquals(Map.of(), old.castOf("q"));
+    }
+
+    @Test
+    void stepsRunTheirActionsAndFollowTheFirstBranchThatHolds() {
+        var q = Quests.quest(Json.object("""
+                {"id": "b", "start": "a",
+                 "steps": {"a": {"on_enter": [{"set_flag": ["entered", true]}], "on_done": [{"set_flag": ["met", true]}],
+                                 "branch": [{"if": {"not": {"flag": "met"}}, "next": "never"},
+                                            {"if": {"all": [{"flag": "met"}, {"quest_state": ["other", "not_started"]}]}, "next": "side"}],
+                                 "next": "never"},
+                           "side": {"on_enter": [{"set_flag": ["entered", false]}], "next": null},
+                           "never": {"next": null}}}"""));
+        var j = Quests.start(Journal.EMPTY, q, Map.of());
+        assertEquals(List.of("entered"), j.flags());
+        j = Quests.complete(j, q);
+        assertEquals(Map.of("b", "side"), j.active());
+        assertEquals(List.of("met"), j.flags());
+        j = Quests.complete(j, q);
+        assertEquals(List.of("b"), j.done());
+        assertEquals("done", j.state("b"));
+        assertEquals("not_started", j.state("x"));
+        assertSame(j, Quests.complete(j, q));
     }
 
     static final Template ERRAND = Quests.check(Json.object("""

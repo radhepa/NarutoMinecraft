@@ -4,11 +4,27 @@ import dev.shinobi.progression.mission.Json;
 import dev.shinobi.progression.mission.Template;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
-/** Checking a quest file and casting it on the map, apart from the mod's entrypoint so it runs without a game. */
+/** Checking a quest file, casting it on the map and walking its steps, apart from the mod's entrypoint so it runs without a game. */
 final class Quests {
     private Quests() {}
+
+    /** A quest's step graph, its title key, and each step's {@code on_enter} and {@code on_done} actions. */
+    record Quest(Template template, String title, Map<String, List<Object>> onEnter, Map<String, List<Object>> onDone) {}
+
+    /** The checked quest in {@code raw}, with its actions. */
+    static Quest quest(Map<String, Object> raw) {
+        var t = check(raw);
+        var enter = new LinkedHashMap<String, List<Object>>();
+        var done = new LinkedHashMap<String, List<Object>>();
+        Json.map(raw.get("steps")).forEach((name, s) -> {
+            enter.put(name, Json.list(Json.map(s).get("on_enter")));
+            done.put(name, Json.list(Json.map(s).get("on_done")));
+        });
+        return new Quest(t, Json.str(raw.get("title"), "quest." + t.id() + ".title"), Map.copyOf(enter), Map.copyOf(done));
+    }
 
     /**
      * The quest in {@code raw}, or why it is broken: a string id, a start step, each step's {@code next} null or a step,
@@ -27,6 +43,12 @@ final class Quests {
         Json.map(raw.get("steps")).forEach((name, s) -> {
             Object next = Json.map(s).get("next");
             if (next != null && !(next instanceof String n && t.steps().containsKey(n))) throw new IllegalArgumentException(t.id() + ": step " + name + " -> missing " + next);
+            for (Object b : Json.list(Json.map(s).get("branch"))) {
+                if (!(Json.map(b).get("next") instanceof String n && t.steps().containsKey(n))) throw new IllegalArgumentException(t.id() + ": step " + name + " branches to missing " + Json.map(b).get("next"));
+                condition(t.id() + ": step " + name, Json.map(b).get("if"), t.id());
+            }
+            for (String when : List.of("on_enter", "on_done"))
+                for (Object a : Json.list(Json.map(s).get(when))) action(t.id() + ": step " + name + " " + when, a);
             var o = t.steps().get(name).objective();
             String field = switch (Json.str(o.get("type"), "")) { case "go" -> "place"; case "talk" -> "who"; default -> null; };
             if (field == null) return;
@@ -36,6 +58,75 @@ final class Quests {
                 throw new IllegalArgumentException(t.id() + ": step " + name + " talks to " + ref + ", not a resident slot");
         });
         return t;
+    }
+
+    /**
+     * Refuses a condition the runtime cannot answer. shortcut: {@code all}, {@code any}, {@code not}, {@code flag} and
+     * {@code quest_state} only, until Shinobi Core's condition registry answers the rest (ROADMAP.md, "Conditions and actions").
+     * shortcut: quest ids and flag names are not checked against the loaded quests, so a typo never holds (or, for
+     * {@code not_started}, always holds); until the checker's cross-file errors (P04-7).
+     */
+    static void condition(String where, Object cond, String self) {
+        var m = Json.map(cond);
+        if (m.size() != 1) throw new IllegalArgumentException(where + ": a condition needs exactly one key: " + cond);
+        var e = m.entrySet().iterator().next();
+        Object v = e.getValue();
+        switch (e.getKey()) {
+            case "all", "any" -> { if (!(v instanceof List<?> l) || l.isEmpty()) throw new IllegalArgumentException(where + ": " + e.getKey() + " needs a list"); l.forEach(x -> condition(where, x, self)); }
+            case "not" -> condition(where, v, self);
+            case "flag" -> { if (!(v instanceof String)) throw new IllegalArgumentException(where + ": flag needs a name"); }
+            case "quest_state" -> {
+                if (!(v instanceof List<?> l && l.size() == 2 && l.get(0) instanceof String && l.get(1) instanceof String st && List.of("done", "active", "not_started").contains(st)))
+                    throw new IllegalArgumentException(where + ": quest_state needs [quest, done|active|not_started]");
+                // A quest is still active while its own branches are tested.
+                if (self.equals(l.get(0))) throw new IllegalArgumentException(where + ": quest_state cannot name its own quest");
+            }
+            default -> throw new IllegalArgumentException(where + ": unknown condition " + e.getKey());
+        }
+    }
+
+    /** Whether a checked condition holds for the journal. */
+    static boolean test(Object cond, Journal j) {
+        var e = Json.map(cond).entrySet().iterator().next();
+        Object v = e.getValue();
+        return switch (e.getKey()) {
+            case "all" -> Json.list(v).stream().allMatch(x -> test(x, j));
+            case "any" -> Json.list(v).stream().anyMatch(x -> test(x, j));
+            case "not" -> !test(v, j);
+            case "flag" -> j.flags().contains((String) v);
+            case "quest_state" -> j.state((String) Json.list(v).get(0)).equals(Json.list(v).get(1));
+            default -> false;
+        };
+    }
+
+    /** Refuses an action the runtime cannot run. shortcut: {@code set_flag} only, until the reward and trade increments add theirs. */
+    static void action(String where, Object action) {
+        var m = Json.map(action);
+        if (!(m.size() == 1 && m.get("set_flag") instanceof List<?> l && l.size() == 2 && l.get(0) instanceof String && l.get(1) instanceof Boolean))
+            throw new IllegalArgumentException(where + ": unknown or malformed action " + action + " (set_flag [name, true|false])");
+    }
+
+    static Journal run(List<Object> actions, Journal j) {
+        for (Object a : actions) {
+            var flag = Json.list(Json.map(a).get("set_flag"));
+            j = j.flag((String) flag.get(0), (Boolean) flag.get(1));
+        }
+        return j;
+    }
+
+    /** The journal with the quest accepted on this cast and its first step's {@code on_enter} run. */
+    static Journal start(Journal j, Quest q, Map<String, String> cast) {
+        return run(q.onEnter().get(q.template().start()), j.accept(q.template(), cast));
+    }
+
+    /** The journal once the quest's current step is done: its {@code on_done}, the branch or next step, the new step's {@code on_enter}. */
+    static Journal complete(Journal j, Quest q) {
+        String id = q.template().id(), at = j.active().get(id);
+        if (at == null) return j;
+        var after = run(q.onDone().get(at), j);
+        var moved = after.advance(q.template(), c -> test(c, after));
+        String now = moved.active().get(id);
+        return now == null ? moved : run(q.onEnter().get(now), moved);
     }
 
     /** The key a slot is cast from in the map's roles ({@code job:}, {@code role:}) or anchors ({@code anchor:}); null if none. */

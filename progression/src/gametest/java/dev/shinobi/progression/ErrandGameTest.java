@@ -22,6 +22,7 @@ import java.util.UUID;
  * the save with the street's anchors, and a done quest cannot be taken again.
  * P04-2: the errand casts the tea house keeper and the yard from the map; the player talks to the keeper by using them;
  * a quest whose anchor the map lacks is refused, and the bound residents survive reopening.
+ * P04-3: asking the keeper sets a flag, so the yard step branches to the notice board; the flags survive reopening.
  */
 @SuppressWarnings("UnstableApiUsage")
 public final class ErrandGameTest implements FabricClientGameTest {
@@ -51,7 +52,7 @@ public final class ErrandGameTest implements FabricClientGameTest {
 
             // Using the keeper through the client's game mode: the interaction packet reaches the server's callback.
             // Retried: under load the server can drop a click sent before it has the teleport (out of reach).
-            for (int i = 0; i < 10 && !journal(w).active().equals(Map.of(ERRAND, "go_yard")); i++) {
+            for (int i = 0; i < 3 && !journal(w).active().equals(Map.of(ERRAND, "go_yard")); i++) {
                 int id = w.getServer().computeOnServer(s -> {
                     var v = w.getConnection().getServerLevel().getEntity(keeper);
                     w.getConnection().getServerPlayer().teleportTo(v.getX() + 1, v.getY(), v.getZ());
@@ -68,14 +69,19 @@ public final class ErrandGameTest implements FabricClientGameTest {
 
             BlockPos yard = built.anchors().get("anchor:training");
             w.getServer().runCommand("tp @p " + yard.getX() + " " + yard.getY() + " " + (yard.getZ() + 1));
+            for (int i = 0; i < 20 && !journal(w).active().equals(Map.of(ERRAND, "go_board")); i++) c.waitTicks(10);
+            check(journal(w).active().equals(Map.of(ERRAND, "go_board")), "the keeper's flag takes the branch to the board: " + journal(w));
+            BlockPos board = built.anchors().get("notice_board");
+            w.getServer().runCommand("tp @p " + board.getX() + " " + board.getY() + " " + (board.getZ() + 1));
             for (int i = 0; i < 20 && !journal(w).done().contains(ERRAND); i++) c.waitTicks(10);
-            check(journal(w).done().contains(ERRAND) && journal(w).active().isEmpty(), "done at the yard: " + journal(w));
+            check(journal(w).done().contains(ERRAND) && journal(w).active().isEmpty(), "done at the board: " + journal(w));
             check(!w.getServer().computeOnServer(s -> ShinobiProgression.accept(w.getConnection().getServerPlayer(), ERRAND)), "taken once");
             save = w.getWorldSave();
         }
         try (var w = save.open()) {
             w.getConnection().waitForChunksRender();
-            check(journal(w).done().equals(List.of(ERRAND)) && journal(w).active().isEmpty(), "the journal after reopening: " + journal(w));
+            check(journal(w).done().equals(List.of(ERRAND)) && journal(w).active().isEmpty()
+                    && journal(w).flags().equals(List.of("test.errand.keeper_asked", "test.errand.board_read")), "the journal after reopening: " + journal(w));
             check(w.getServer().computeOnServer(s -> w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ANCHORS, Map.of()).containsKey("anchor:training")
                     && w.getConnection().getServerLevel().getAttachedOrElse(ShinobiVillage.ROLES, Map.of()).containsKey("job:tea_house")), "the street's anchors and roles after reopening");
         }
