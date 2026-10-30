@@ -19,6 +19,10 @@ them alone. Each resident a batch spawns calls `LeafNames.marker(v, marker)` aft
   closed well from a level landing behind a door; tatami lies on the floor, level with the bed. Each keeper sells
   its own shop (`ShinobiProgression.SHOPS`). `LeafFlats.CLAIMS` gives a placed resident back the bed it stands by
   once, if VF handed beds out first (`LeafFlatsTest`).
+- Konoha K3 (this commit): lived-in interiors. Kit helpers (`stove`, `fridge`, `counter`, `low_table`, `tansu`,
+  `butsudan`, `desk`, `toilet`; TECHNIQUES §10.1); Sakura Lane's home (all three palettes) with a kitchen run, dining,
+  toilet, parents' and child's rooms; the Leaf Block's resident flats by household (the player flats stay open); the
+  keepers' rooms above the grocer, the furniture and weapon shops, Ichiraku and the tea house.
 - `names` merged (63110e1, owner-approved): resident names and dialogue.
 
 ## Villager track (branch `claude/villagers-eeb914`, for `dev`)
@@ -42,7 +46,8 @@ them alone. Each resident a batch spawns calls `LeafNames.marker(v, marker)` aft
 asleep in their own beds. After the merge: build, `dialogue.py`, `creator.py`, `missions.py` and `layout.py --check`
 passed; the client gametest with `LeafNamesGameTest` passed (`.local-dev/logs/merge-gt.log`): 27 of 29 asleep, the
 day route 8.8 to 13.4 ms per tick, the night route 4.8 to 5.0. Screenshots: `village/build/run/clientGameTest/screenshots/*konoha-*`;
-renders: `docs/renders/konoha/`.
+renders: `docs/renders/konoha/`. K3: build passed (`.local-dev/logs/k3-build2.log`); the client gametest passed
+(`.local-dev/logs/k3-gt2.log`): 29 residents, 30 plaques, 27 of 29 asleep, the day route 6.5 to 10.2 ms per tick.
 
 ## Remaining
 
@@ -68,6 +73,4 @@ None.
 
 ## Next
 
-K3 interiors ([BATCHES.md](../konoha/BATCHES.md)): kit furnishing helpers, lived-in rooms in every built resident
-home (Sakura Lane, the Leaf Block's resident flats, the keepers above the shops). Then K4 facade pass, K5 layout
-merge (the Academy moves to the Rock's foot), K6 terrain, K7 to K14 by district.
+K4 building families and the quality gate ([BATCHES.md](../konoha/BATCHES.md)).

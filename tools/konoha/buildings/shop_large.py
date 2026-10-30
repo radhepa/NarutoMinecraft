@@ -126,9 +126,31 @@ def build(id="shop_large", title="Large store", trade="furniture", wall="terraco
     p.set(13, 7, 7, f"{bed}_bed[facing=north,part=head]")
     p.set(13, 7, 8, f"{bed}_bed[facing=north,part=foot]")
     p.set(14, 7, 7, "chest[facing=west]")
-    p.set(8, 7, 7, "spruce_trapdoor[facing=south,half=bottom,open=false]")
+    for z in (7, 8):
+        p.set(8, 7, z, "spruce_trapdoor[facing=south,half=bottom,open=false]")
     p.set(13, 9, 9, f"{NS}:white_paper_lantern")
     p.set(4, 9, 4, f"{NS}:white_paper_lantern")
+    # the cooking run on the back wall, a rail along the stairwell, a tansu by the bed, the keeper's desk,
+    # cushions round the table, and the trade's own corner (offcuts and a bench, or a whetstone)
+    p.stove(4, 7, 2, "south")
+    p.set(5, 7, 2, "water_cauldron[level=3]")
+    p.counter(6, 7, 2, "south")
+    p.fridge(7, 7, 2)
+    p.tansu(2, 7, 2, "south", top="potted_azalea_bush")
+    for x in range(8, 12):
+        p.set(x, 7, 3, "spruce_fence")
+    for x in (7, 9):
+        for z in (7, 8):
+            p.set(x, 7, z, "red_carpet")
+    p.tansu(14, 7, 8, "west")
+    p.desk(14, 7, 4)
+    p.set(14, 7, 10, "potted_bamboo")
+    if trade == "weapons":
+        p.set(2, 7, 10, "grindstone[face=floor,facing=east]")
+        p.set(3, 7, 10, "barrel[facing=up]")
+    else:
+        p.set(2, 7, 10, "crafting_table")
+        p.set(3, 7, 10, "stripped_spruce_log[axis=x]")
     for x in (3, 13):
         p.window(x, 7, 11, 2)
     for z in (4, 8):

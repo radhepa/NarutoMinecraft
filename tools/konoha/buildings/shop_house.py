@@ -72,6 +72,16 @@ def build(id="shop_house", title="Shop-house", wall="cream", roof="green", awnin
     p.set(2, 6, 3, f"{bed}_bed[facing=north,part=foot]")
     p.set(3, 6, 2, "chest[facing=south]")
     p.set(8, 6, 6, f"{NS}:white_paper_lantern")
+    # the family's room: a cooking corner on the east wall, a low table, a tansu, the grocer's desk and ledgers
+    p.stove(8, 6, 4, "west")
+    p.counter(8, 6, 5, "west")
+    for x in (4, 5):
+        p.low_table(x, 6, 5)
+    for x in (3, 6):
+        p.set(x, 6, 5, "red_carpet")
+    p.tansu(2, 6, 6, "east", top="potted_fern")
+    p.desk(6, 6, 6)
+    p.set(7, 6, 6, "bookshelf")
     # square windows with shutters: two at the front, one on each side upstairs, one on each side below
     for x in (3, 7):
         p.set(x, 7, 7, "white_stained_glass_pane")

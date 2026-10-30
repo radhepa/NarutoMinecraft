@@ -210,6 +210,40 @@ class Plan:
         self.set(x, y, z, f"{wood}_door[facing={facing},half=lower,hinge=left,open=false]")
         self.set(x, y + 1, z, f"{wood}_door[facing={facing},half=upper,hinge=left,open=false]")
 
+    # -- furnishing (docs/konoha/TECHNIQUES.md §10; vanilla stand-ins until the Leaf set's pieces land)
+    # `f` is the way the piece's front faces, into the room.
+    def stove(self, x, y, z, f):
+        self.set(x, y, z, f"smoker[facing={f}]")
+        self.set(x, y + 2, z, f"iron_trapdoor[facing={f},half=top,open=false]")  # the hood
+
+    def fridge(self, x, y, z):
+        self.fill(x, y, z, x, y + 1, z, "white_concrete")
+
+    def counter(self, x, y, z, f, cupboard=True):
+        self.set(x, y, z, f"barrel[facing={f}]")
+        if cupboard:  # an open trapdoor lies flat on the wall behind, like a cupboard door
+            self.set(x, y + 2, z, f"spruce_trapdoor[facing={f},half=top,open=true]")
+
+    def low_table(self, x, y, z):
+        self.set(x, y, z, "spruce_slab[type=bottom]")
+
+    def tansu(self, x, y, z, f, top=None):
+        self.set(x, y, z, f"barrel[facing={f}]")
+        if top:
+            self.set(x, y + 1, z, top)
+
+    def butsudan(self, x, y, z):
+        self.set(x, y, z, "stripped_dark_oak_wood[axis=y]")
+        self.set(x, y + 1, z, "candle[candles=3,lit=false]")
+
+    def desk(self, x, y, z):
+        self.set(x, y, z, "spruce_slab[type=top]")
+        self.set(x, y + 1, z, "lantern[hanging=false]")
+
+    def toilet(self, x, y, z):
+        self.set(x, y, z, "hopper[facing=down]")
+        self.set(x, y + 1, z, "birch_trapdoor[facing=north,half=bottom,open=false]")
+
     # -- output -------------------------------------------------------------------------------
     def connect(self):
         """Fence and pane connections, as Minecraft would compute them on placement."""

@@ -163,13 +163,18 @@ VANILLA = {
     "melon": ("#72921e", "plain"), "pumpkin": ("#c57418", "grid"), "smithing_table": ("#3a2f2b", "planks"),
     "spruce_pressure_plate": ("#735531", "planks"), "stonecutter": ("#7b7672", "plain"), "water_cauldron": ("#4a4a4f", "plain"),
     "white_bed": ("#e9ecec", "wool"), "green_bed": ("#546d1b", "wool"), "brown_bed": ("#724728", "wool"),
+    "iron_trapdoor": ("#c8c8c8", "plain"), "birch_trapdoor": ("#d7c185", "planks"), "hopper": ("#3e3e3e", "plain"),
+    "stripped_dark_oak_wood": ("#4a3a26", "planks"), "candle": ("#e8d9b0", "plain"), "decorated_pot": ("#8c4a32", "plain"),
+    "light_blue_carpet": ("#3aafd9", "wool"), "blue_carpet": ("#35399d", "wool"), "green_carpet": ("#546d1b", "wool"),
+    "gray_carpet": ("#3e4447", "wool"), "potted_fern": ("#4f7a2c", "leaves"), "potted_spruce_sapling": ("#3d5a2a", "leaves"),
+    "potted_bamboo": ("#7d8a27", "leaves"),
 }
 
 THIN = {"glass_pane", "white_stained_glass_pane", "gray_stained_glass_pane", "iron_bars"}
 FENCE = {"spruce_fence", "oak_fence", "dark_oak_fence", "bamboo_fence"}
 DOORS = {"spruce_door", "dark_oak_door"}
-TRAPDOORS = {"spruce_trapdoor", "dark_oak_trapdoor"}
-CARPET = {"white_carpet", "red_carpet", "spruce_pressure_plate"}
+TRAPDOORS = {"spruce_trapdoor", "dark_oak_trapdoor", "iron_trapdoor", "birch_trapdoor"}
+CARPET = {"white_carpet", "red_carpet", "light_blue_carpet", "blue_carpet", "green_carpet", "gray_carpet", "spruce_pressure_plate"}
 BEDS = {"red_bed", "blue_bed", "white_bed", "green_bed", "brown_bed"}
 
 
@@ -271,9 +276,11 @@ def vanilla_boxes(name: str, props: dict) -> list[tuple]:
         return [((0, 3, 0), (16, 9, 16))], 0
     if b == "lantern":
         return [((5, 1, 5), (11, 8, 11)), ((6, 8, 6), (10, 10, 10))], 0
-    if b in ("flower_pot", "potted_azalea_bush"):
+    if b == "candle":
+        return [((6, 0, 6), (10, 6, 10))], 0
+    if b == "flower_pot" or b.startswith("potted_"):
         out = [((5, 0, 5), (11, 6, 11))]
-        if b == "potted_azalea_bush":
+        if b != "flower_pot":
             out.append(((3, 6, 3), (13, 14, 13)))
         return out, 0
     return [((0, 0, 0), (16, 16, 16))], 0
@@ -286,7 +293,7 @@ def is_full(state: str) -> bool:
     b = name[10:]
     if b.endswith(("_slab", "_stairs")) or b in THIN | FENCE | DOORS | TRAPDOORS | CARPET | BEDS:
         return name.endswith("_slab") and props.get("type") == "double"
-    if b in ("lantern", "flower_pot", "potted_azalea_bush", "glass", "water") or "leaves" in b:
+    if b in ("lantern", "flower_pot", "candle", "glass", "water") or b.startswith("potted_") or "leaves" in b:
         return False
     return True
 

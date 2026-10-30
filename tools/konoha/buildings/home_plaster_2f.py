@@ -70,13 +70,28 @@ def build(wall="cream", roof="green") -> Plan:
                 p.set(x, 2, z, f"{NS}:tatami[axis={'z' if x % 2 else 'x'}]")
     for x in (2, 3, 7):
         p.shoji(x, 2, 5, "south")
-    p.set(8, 2, 2, "smoker[facing=south]")
-    p.set(8, 2, 3, "cauldron")
-    p.set(7, 2, 2, "barrel[facing=up]")
+    # the kitchen run on the back wall; dining at a low table with cushions; the TV corner
+    p.stove(5, 2, 2, "south")
+    p.set(6, 2, 2, "water_cauldron[level=3]")              # sink
+    p.counter(7, 2, 2, "south")
+    p.fridge(8, 2, 2)
+    p.counter(8, 2, 3, "west", cupboard=False)
+    for z in (3, 4):
+        p.low_table(3, 2, z)
+        p.set(2, 2, z, "red_carpet")
+    p.set(4, 2, 4, "red_carpet")
+    p.set(2, 2, 2, "spruce_slab[type=top]")                # the TV on its low cabinet
+    p.set(2, 3, 2, "black_concrete")
+    p.set(3, 2, 2, "potted_fern")
+    p.set(8, 2, 4, "barrel[facing=west]")                  # storage under the stair
+    # beside the genkan: the shoe cabinet, the toilet and basin behind the shoji
+    p.tansu(4, 2, 5, "east", top="potted_azalea_bush")
+    p.toilet(2, 2, 6)
+    p.set(3, 2, 6, "cauldron")
     # stair up along the east wall
     for i, z in enumerate((6, 5, 4)):
         p.set(8, 2 + i, z, "spruce_stairs[facing=north,half=bottom]")
-    p.clear(8, 5, 3, 8, 5, 6)
+    p.clear(8, 5, 4, 8, 5, 6)                              # (8, 5, 3) stays: the landing off the top step
     # upstairs: two tatami rooms split by a shoji wall
     for x in range(2, 8):
         for z in range(2, 7):
@@ -88,8 +103,15 @@ def build(wall="cream", roof="green") -> Plan:
     p.set(6, 6, 5, "red_bed[facing=west,part=head]")
     for z in (2, 3):
         p.shoji(5, 6, z, "east")
+    # the parents' room (west): a tansu, the family altar, a lantern; the child's room (east): a desk
     p.set(4, 6, 6, "chest[facing=north]")
-    p.set(6, 6, 2, f"{NS}:white_paper_lantern")
+    p.tansu(3, 6, 2, "south", top="potted_spruce_sapling")
+    p.butsudan(2, 6, 6)
+    p.set(2, 6, 5, f"{NS}:white_paper_lantern")
+    p.desk(7, 6, 2)
+    p.set(8, 6, 2, "bookshelf")
+    p.set(7, 6, 3, "light_blue_carpet")
+    p.set(6, 6, 2, "decorated_pot")
     # roof: eaves at the top of the upper walls
     p.gable_roof(1, 9, 1, 7, 9, roof, gable_style=wall)
     # markers for the Village Friends homes, census and routines

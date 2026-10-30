@@ -66,6 +66,14 @@ def build() -> Plan:
     p.set(2, 5, 3, "white_bed[facing=north,part=foot]")
     p.set(3, 5, 2, "chest[facing=south]")
     p.set(7, 5, 6, f"{NS}:white_paper_lantern")
+    # a low table with cushions, a tansu, the cook's own bowls on a shelf by the window
+    for x in (4, 5):
+        p.low_table(x, 5, 5)
+        p.set(x, 5, 4, "red_carpet")
+    p.tansu(2, 5, 6, "east", top="potted_fern")
+    for x in (5, 6):
+        p.set(x, 5, 6, "spruce_slab[type=top]")
+        p.set(x, 6, 6, "flower_pot")
     for x in (3, 6):
         p.window(x, 5, 7, 2)
     p.window(1, 5, 4, 2)

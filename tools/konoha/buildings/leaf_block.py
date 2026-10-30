@@ -26,6 +26,52 @@ FLAT_X = (1, 12, 23)                    # west inner x of flats a, b, c (10 wide
 BACK, FRONT = 2, 11                     # back and front wall z; interior z 3..10
 WALK, LANE, RAIL = 12, 13, 14           # the gallery
 SPECIAL = {"1a": "landlady", "4b": "family_with_child", "3a": "player_classic", "2c": "player_candidate"}
+# who lives in the other resident flats: decides the main room's furniture (docs/konoha/TECHNIQUES.md §10.3)
+HOUSEHOLD = {"1b": "shinobi", "1c": "elder", "2a": "civilian", "2b": "shinobi", "3b": "civilian", "3c": "elder",
+             "4a": "shinobi", "4c": "civilian"}
+
+
+def furnish(p: Plan, X, Z, y, kind: str):
+    """A resident's main room. Kept clear: the walk from the genkan along ix 1 to the bed, row iz 4 to the
+    kitchenette, ix 2 iz 0 to the balcony door, the resident and desk marks (iz 3) and the closet fronts (iz 5)."""
+    def table(colour, seats=((3, 2), (4, 2), (2, 1), (5, 1)), cells=(3, 4)):
+        for ix in cells:
+            p.low_table(X(ix), y, Z(1))
+        for ix, iz in seats:
+            p.set(X(ix), y, Z(iz), f"{colour}_carpet")
+    if kind == "landlady":
+        table("red")
+        p.butsudan(X(0), y, Z(5))
+        p.tansu(X(0), y, Z(3), "east", top="potted_azalea_bush")
+        p.set(X(0), y, Z(4), "bookshelf")
+        p.set(X(0), y, Z(2), "potted_fern")
+        p.tansu(X(5), y, Z(0), "west")
+    elif kind == "family_with_child":
+        table("blue")
+        p.desk(X(5), y, Z(3))                               # the child's desk
+        p.tansu(X(0), y, Z(3), "east")
+        p.set(X(0), y, Z(4), "bookshelf")
+        p.set(X(0), y, Z(2), "decorated_pot")
+        p.tansu(X(5), y, Z(0), "west")
+    elif kind == "shinobi":
+        table("gray", seats=((3, 2),), cells=(3,))
+        p.desk(X(5), y, Z(3))
+        p.set(X(5), y, Z(0), "grindstone[face=floor,facing=west]")
+        p.fill(X(0), y, Z(3), X(0), y, Z(4), "bookshelf")  # scrolls
+        p.set(X(0), y, Z(5), "chest[facing=east]")
+        p.set(X(0), y, Z(2), "potted_fern")
+    elif kind == "civilian":
+        table("green")
+        p.tansu(X(0), y, Z(3), "east", top="potted_bamboo")
+        p.tansu(X(0), y, Z(4), "east")
+        p.set(X(0), y, Z(2), "decorated_pot")
+        p.set(X(5), y, Z(0), "potted_fern")
+    elif kind == "elder":
+        table("red", seats=((3, 2), (2, 1)))
+        p.butsudan(X(0), y, Z(5))
+        p.tansu(X(0), y, Z(3), "east", top="potted_spruce_sapling")  # the bonsai
+        p.set(X(0), y, Z(4), "bookshelf")
+        p.set(X(5), y, Z(0), "potted_azalea_bush")
 
 
 def flat(p: Plan, x0: int, fy: int, fid: str, wall: str):
@@ -65,16 +111,22 @@ def flat(p: Plan, x0: int, fy: int, fid: str, wall: str):
         p.door(X(2), y1, BACK, "south")
         for ix in range(0, 6):
             p.set(X(ix), y1, 0, "bamboo_fence")
-    # fixtures (vanilla stand-ins until the kit's pieces land; the markers are what systems read)
-    p.set(X(9), y1, Z(4), "smoker[facing=west]")            # stove: a Hearth & Harvest cooking pot
+    # fixtures (the markers are what systems read)
+    p.stove(X(9), y1, Z(4), "west")                         # a Hearth & Harvest cooking pot later
     p.set(X(9), y1, Z(5), "cauldron")                       # sink
-    p.set(X(9), y1, Z(6), "barrel[facing=up]")              # counter
+    p.counter(X(9), y1, Z(6), "west")
+    p.fridge(X(9), y1, Z(7))
+    p.toilet(X(7), y1, Z(0))
     p.set(X(8), y1, Z(0), "cauldron")                       # tub (ofuro)
     p.set(X(9), y1, Z(0), "cauldron")
     p.set(X(7), y1, Z(2), "cauldron")                       # washbasin, mirror above
     p.set(X(0), y1, Z(0), "blue_bed[facing=north,part=head]")
     p.set(X(0), y1, Z(1), "blue_bed[facing=north,part=foot]")
     p.set(X(5), y1 + 2, Z(0), f"{NS}:white_paper_lantern")
+    role = SPECIAL.get(fid)
+    player = (role or "").startswith("player")
+    if not player:                                          # player flats stay open: the player furnishes them
+        furnish(p, X, Z, y1, role or HOUSEHOLD[fid])
     # markers
     door = (X(1), y1, FRONT)
     p.marker("house_plaque", (X(0), fy + 2, Z(7)), facing="south", home=f"flat.leaf_block.{fid}")
@@ -84,10 +136,9 @@ def flat(p: Plan, x0: int, fy: int, fid: str, wall: str):
                       ("anchor:mirror", (X(7), y1 + 1, Z(2))), ("anchor:closet", (X(3), y1, Z(5))), ("anchor:desk", (X(4), y1, Z(3))),
                       ("anchor:balcony_rail", (X(2), y1, 1)), ("anchor:visitor_wait", (X(1), y1, WALK))):
         p.marker(kind, pos, home=f"flat.leaf_block.{fid}")
-    role = SPECIAL.get(fid)
-    if role not in ("player_classic", "player_candidate"):
+    if not player:
         p.marker("resident", (X(3), y1, Z(3)), group="any", job="any", **({"role": role} if role else {}))
-    if role and role.startswith("player"):
+    if player:
         p.marker("candidate_flat", (X(3), y1, Z(3)), home=f"flat.leaf_block.{fid}", note=role)
     return {
         "id": f"flat.leaf_block.{fid}", "tier": "flat", "plaque": [X(0), fy + 2, Z(7)], "door": list(door),

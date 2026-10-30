@@ -151,33 +151,26 @@ bed, a chest, a low table and a lamp). **Player homes stay open**: the Classic f
 Varied candidate flats keep their open floor, because the player furnishes them (docs/HOME.md);
 they get the fixed kitchen and bath fittings only.
 
-### 10.1 Furnishing recipes (vanilla stand-ins, one kit helper each)
+### 10.1 Furnishing recipes (vanilla stand-ins)
+
+The kit's helpers (`tools/konoha/kit.py`, K3); `f` is the way the piece faces, into the room.
 
 | Piece | Kit helper | Blocks (stand-in) |
 |---|---|---|
-| Genkan | `genkan(x0, z0, x1, z1, y)` | polished_andesite floor half a block below (a bottom slab step up); the shoe cabinet: a spruce column faced with trapdoors, a flower pot on top |
-| Sink | `sink(x, y, z, facing)` | water_cauldron[level=3] in the counter run, tripwire_hook above as the tap |
-| Stove | `stove(x, y, z, facing)` | smoker under, an iron_trapdoor top as the burners, an iron_trapdoor hood two above, a light block |
-| Fridge | `fridge(x, y, z, facing)` | white_concrete over white_concrete, an iron_trapdoor face, a stone button handle |
-| Counter, cupboards | `counter(x0, z0, x1, z1, y, facing)` | barrels with spruce trapdoor fronts, a smooth_quartz_slab or spruce_slab top; open trapdoors above as wall cupboards |
-| Low table (chabudai) | `low_table(x, y, z)` | spruce trapdoor closed at the top half, or a spruce bottom slab |
-| Kotatsu | `kotatsu(x, y, z)` | a spruce top slab over red carpet, a light block below |
-| Zabuton | `cushions(x, y, z, colour)` | carpets around the low table |
-| Oshiire (futon closet) | `oshiire(x, y, z, facing, w=2)` | a one-deep recess, a spruce_slab shelf at mid-height, shoji or birch trapdoor fronts, white wool inside |
-| Tokonoma | `tokonoma(x, y, z, facing)` | a 1 × 2 alcove with a dark oak bottom slab floor, a dark oak log corner post, a banner as the scroll, a flower pot with an azalea |
-| Butsudan | `butsudan(x, y, z, facing)` | a dark oak block, dark oak trapdoor doors, a candle on top |
-| Kamidana | `kamidana(x, y, z, facing)` | a spruce top slab high on the wall, a white candle |
-| Tansu | `tansu(x, y, z, facing, h=2)` | barrels or spruce planks faced with spruce trapdoors; a chest where storage is real |
-| Desk | `desk(x, y, z, facing)` | a spruce top slab on a fence, a lantern or candle, a lectern or bookshelf beside |
-| Shelf | `shelf(x, y, z, facing)` | a bookshelf or chiseled_bookshelf, or open trapdoors on the wall |
-| Tub (ofuro) | `tub(x0, z0, x1, z1, y)` | water one block down, a stripped spruce rim, an iron_trapdoor lid half-closed |
-| Toilet | `toilet(x, y, z, facing)` | a hopper with a birch trapdoor lid, a button |
-| Washing machine | `washer(x, y, z, facing)` | smooth_quartz with an iron_trapdoor face |
-| Laundry pole | `laundry(x0, x1, z, y)` | fences and a chain rail; the Leaf `laundry_line` block when it lands |
-| TV | `tv(x, y, z, facing)` | black_concrete with a black stained glass pane face on a low spruce cabinet |
-| Plants | `plant(x, y, z, kind)` | flower pots on sills and counters, an azalea in a decorated pot by the genkan |
-| Shop counter | `shop_counter(x0, z0, x1, z1, y, facing)` | upside-down spruce stairs as the front, a slab top, barrels and decorated pots behind |
-| Light | `glow(x, y, z, level)` | `minecraft:light` |
+| Stove | `stove(x, y, z, f)` | a smoker, an iron_trapdoor hood two above |
+| Fridge | `fridge(x, y, z)` | white_concrete two high |
+| Counter, cupboards | `counter(x, y, z, f, cupboard=True)` | a barrel, an open spruce trapdoor two above as the wall cupboard |
+| Low table (chabudai) | `low_table(x, y, z)` | a spruce bottom slab |
+| Tansu | `tansu(x, y, z, f, top=None)` | a barrel, a pot or plant on top |
+| Butsudan | `butsudan(x, y, z)` | stripped dark oak wood, three candles on top |
+| Desk | `desk(x, y, z)` | a spruce top slab, a lantern on it |
+| Toilet | `toilet(x, y, z)` | a hopper, a birch trapdoor lid |
+
+Set directly in the designs: the sink (water_cauldron[level=3] in the counter run), the basin (an
+empty cauldron), zabuton (carpets round the table), the TV (black_concrete on a spruce top slab),
+shelves and the bookshelf beside a desk, plants (potted plants, decorated pots). Later pieces, with the Leaf set or
+the batch that needs them: the genkan step, kotatsu, oshiire, tokonoma, kamidana, the tub, the
+washer, the laundry pole, the shop counter, hidden light (`minecraft:light`).
 
 Item frames and paintings are entities; the blueprint format carries blocks and markers only, so the
 recipes use none. Clutter comes from blocks: pots, candles, books (chiseled bookshelves), banners,

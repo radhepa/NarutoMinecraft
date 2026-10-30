@@ -73,6 +73,16 @@ def build(wall="cream", roof="orange", awning="red", noren="tea") -> Plan:
     p.fill(5, 6, 2, 5, 8, 2, "spruce_planks")
     p.set(8, 6, 3, "red_bed[facing=north,part=head]")
     p.set(8, 6, 4, "red_bed[facing=north,part=foot]")
+    # the owner's rooms: a cooking corner past the partition, a low table, tea canisters on the tansu
+    p.stove(6, 6, 2, "south")
+    p.set(7, 6, 2, "water_cauldron[level=3]")
+    p.counter(8, 6, 2, "south")
+    p.low_table(6, 6, 5)
+    for x in (5, 7):
+        p.set(x, 6, 5, "red_carpet")
+    p.tansu(2, 6, 6, "east", top="decorated_pot")
+    p.set(3, 6, 6, "decorated_pot")
+    p.set(8, 6, 6, f"{NS}:white_paper_lantern")
     p.gable_roof(1, 9, 1, 7, 9, roof, gable_style=wall)
     p.marker("tavern_bounds", (1, 1, 1), to=[9, 8, 9])
     for x in (2, 3, 7, 8):
