@@ -189,6 +189,7 @@ public final class ShinobiProgression implements ModInitializer {
             try (var in = resource.open()) {
                 Map<String, Object> raw = Json.object(new String(in.readAllBytes(), StandardCharsets.UTF_8));
                 var q = Quests.quest(raw);
+                knownItems(raw);
                 QUESTS.put(q.template().id(), q);
             } catch (IOException | RuntimeException e) {
                 throw new IllegalStateException("Quest file " + file + ": " + e.getMessage(), e);
@@ -197,6 +198,15 @@ public final class ShinobiProgression implements ModInitializer {
         LOG.info("Shinobi Progression: {} quests", QUESTS.size());
     }
 
+
+    /** Refuses a give_item naming no registered item, so a typo stops the load instead of handing over nothing. */
+    private static void knownItems(Object o) {
+        if (o instanceof Map<?, ?> m) {
+            if (m.get("give_item") instanceof String id && ShinobiLife.item(id) == net.minecraft.world.item.Items.AIR)
+                throw new IllegalArgumentException("give_item names no item: " + id);
+            m.values().forEach(ShinobiProgression::knownItems);
+        } else if (o instanceof List<?> l) l.forEach(ShinobiProgression::knownItems);
+    }
 
     /** Takes the quest into the player's journal, cast on this map; false if it is already there or done, or the map lacks a slot or place. */
     public static boolean accept(ServerPlayer player, String id) {
