@@ -1,6 +1,6 @@
 # Development state
 
-**Phase/task:** P03-3, deterministic resident identity and appearance
+**Phase/task:** P03-4, the street's shop, notice board and training space
 ([ROADMAP.md 13.5](../../ROADMAP.md#p03--make-the-village-tangible)). P00 to P02 passed (13.3).
 **Branch/base:** `dev` in `C:\Users\minal\NarutoMinecraft-dev`, from `main` e9238bd; pushed to `origin/dev`.
 The story checkout on the Desktop keeps its unfinished work; story review stays paused.
@@ -9,14 +9,21 @@ The story checkout on the Desktop keeps its unfinished work; story review stays 
 
 1. Done: Shinobi Village (`village/`, mod id `narutominecraft`): VF residents wear the Leaf wardrobe.
 2. Done: the test street (`leaf_block`) with ten residents in their own flats, by day and at night.
-3. Deterministic resident identity and appearance from the save seed and marker, surviving reload;
-   role identities for the bound cast (moved from P02).
-4. Map rules (vanilla and VF generation off on the test map).
-5. A resident count and a measured route for performance.
+3. Done (partly): deterministic resident identity and appearance, surviving reload. Still open: the
+   Core save seed and Classic/Varied mode choosing the cast, role identities for the bound cast (from P02).
+4. The street's shop, notice board and training space; adventure protection and a builder workflow.
+5. Map rules (vanilla and VF generation off on the test map).
+6. A resident count and a measured route for performance.
 
 P02 (done): `PlayerRecord`, `SaveSeed`, `Seeds`, `Saved.forgiving`, owner sync, `checkLayers`.
 
 ## Evidence (29 October 2026, Windows 11, JDK 25.0.5)
+
+- P03-3 `./gradlew build`: passed, 386 tests; `:village:runClientGameTest` passed: each resident's UUID
+  comes from the world seed and its marker, so VF draws the same profile, name and look for it; ten
+  different residents; reopening the save finds all ten with the same names, looks and flats. Building a
+  second street on the same seed fails clearly instead of spawning duplicates. Not yet: the Core save seed
+  and Classic/Varied mode (shortcut: the world seed); Leaf names and palettes.
 
 - P03-2 `./gradlew build`: passed, 386 tests; `:village:runClientGameTest` passed: the 21 Konoha blocks
   register, `leaf_block` pastes on a flat map, VF reads 11 plaqued flats with a bed each, all ten residents
@@ -55,6 +62,7 @@ None.
 
 ## Next
 
-P03-3: give each test-street resident a stable identity and look drawn from the save seed and its marker
-(the same ten residents, names and outfits in every new world with that seed), saved with the world; a
-client gametest builds the street, quits, reopens the save and finds the same residents in the same flats.
+P03-4: add a shop, a notice board and a training space to the test street (blueprints `shop_tea_house`
+and two small fixtures), pasted by `/narutominecraft street`; protect the street in adventure mode with an
+operator builder switch. A client gametest finds each anchor and checks that a survival player cannot break
+street blocks while a builder can.

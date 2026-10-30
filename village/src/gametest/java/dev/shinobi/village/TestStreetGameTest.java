@@ -1,11 +1,13 @@
 package dev.shinobi.village;
 
+import dev.villagefriends.VillageFriends;
 import dev.villagefriends.home.House;
 import dev.villagefriends.home.Homes;
 import dev.villagefriends.routine.Routine;
 import net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest;
 import net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext;
 import net.fabricmc.fabric.api.client.gametest.v1.context.TestSingleplayerContext;
+import net.fabricmc.fabric.api.client.gametest.v1.world.TestWorldSave;
 import net.minecraft.client.gui.screens.worldselection.WorldCreationUiState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -19,11 +21,16 @@ import java.util.Locale;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
-/** P03-2: the test street on a flat map: ten residents each get their own flat and bed, walk by day and sleep at night. Screenshots: test-street-*. */
-@SuppressWarnings("UnstableApiUsage")
+/**
+ * P03-2: the test street on a flat map: ten residents each get their own flat and bed, walk by day and sleep at night.
+ * P03-3: the same seed gives the same cast, and reopening the save finds the same residents in the same flats. Screenshots: test-street-*.
+ */
+@SuppressWarnings({"UnstableApiUsage", "unchecked"})
 public final class TestStreetGameTest implements FabricClientGameTest {
     @Override
     public void runTest(ClientGameTestContext c) {
+        TestWorldSave save;
+        List<String> cast;
         try (var w = c.worldBuilder().adjustSettings(ui -> {
             var flat = ui.getSettings().worldgenLoadContext().lookupOrThrow(Registries.WORLD_PRESET).getOrThrow(WorldPresets.FLAT);
             ui.setWorldType(new WorldCreationUiState.WorldTypeEntry(flat));
@@ -62,7 +69,35 @@ public final class TestStreetGameTest implements FabricClientGameTest {
             until(c, () -> asleep(w, built) >= 8, 2400, () -> "residents asleep in their own beds: " + asleep(w, built) + "; doing "
                     + w.getServer().computeOnServer(s -> built.residents().stream().map(dev.villagefriends.ResidentRoutines::doing).toList()));
             ShinobiVillage.LOG.info("Test street: {} of 10 residents asleep in their own beds", asleep(w, built));
+
+            cast = w.getServer().computeOnServer(s -> built.residents().stream().map(TestStreetGameTest::identity).toList());
+            ShinobiVillage.LOG.info("Test street cast: {}", cast);
+            check(built.residents().getFirst().getUUID().equals(TestStreet.resident(26, 0)), "the cast comes from the seed and the markers");
+            check(cast.stream().map(id -> id.split("\\|")[1]).distinct().count() == 10, "ten different residents: " + cast);
+            save = w.getWorldSave();
         }
+
+        try (var w = save.open()) {
+            w.getConnection().waitForChunksRender();
+            List<String>[] found = new List[1];
+            until(c, () -> {
+                found[0] = w.getServer().computeOnServer(s -> {
+                    var level = w.getConnection().getServerLevel();
+                    var out = new java.util.ArrayList<String>();
+                    for (String id : cast) {
+                        var e = level.getEntity(java.util.UUID.fromString(id.split("\\|")[0]));
+                        if (e instanceof Villager v && Homes.houseOf(v) != null) out.add(identity(v));
+                    }
+                    return out;
+                });
+                return found[0].equals(cast);
+            }, 600, () -> "the same residents in the same flats after reopening: " + found[0]);
+        }
+    }
+
+    /** A resident's UUID, name, look and flat. */
+    static String identity(Villager v) {
+        return v.getUUID() + "|" + v.getCustomName().getString() + "|" + v.getAttached(VillageFriends.LOOK) + "|" + Homes.houseOf(v).id();
     }
 
     static long walked(TestSingleplayerContext w, TestStreet.Built built, List<Vec3> spawn) {
